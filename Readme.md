@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Olga Stepanova](https://up.htmlacademy.ru/adaptive/18/user/828971).
-* Наставник: `Неизвестно`.
+* Наставник: Семён Якушев.
 
 ---
 
