@@ -1,12 +1,97 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+</head>
+<body>
+<header class="page-header">
+  <logo class="page-header__logo"></logo>
+  <button class="toggle-button"></button>
+  <nav class="main-nav">
+    <ul class="main-nav__wrapper">
+      <li class="main-nav item"></li>
+      <li class="main-nav item"></li>
+      <li class="main-nav item"></li>
+      <li class="main-nav item"></li>
+    </ul>
+  </nav>
+</header>
+<main>
+  <section class="intro">
+    <div class="main-banner"> <!--    Этот блок можно использовать на других страницах, если убрать все кроме h1-->
+      <div class="main-banner__welcome">Welcome</div>
+      <div class="main-banner__welcome-postfix">to the gorgeous</div>
+      <h1 class="main-banner__main-name">Sedona</h1>
+      <div class="main-banner__slogan">"Because the Grand Canyon sucks!"</div>
+    </div>
+    <div class="about">
+      <p class="about_what-is">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
+      <p class="about_five-goals">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+    </div>
+  </section>
+  <section class="advantages">
+    <div class="goal"> <!--    Этот блок используется на всём макете пять раз-->
+      <p class="goal__title">Настоящий городок</p>
+      <p class="goal__number">-№1-</p>
+      <p class="goal__description">Седона - не аттракцион для туристов, там течет своя жизнь!</p>
+    </div>
+    <img src="" alt="" class="advantages__pic"> <!--    Этот имадж называется по имени секции - он её элемент-->
+    <ul class="goal__list">
+      <li class="advantages__item">
+        <p class="advantages__offer">Жилье</p>
+        <p class="advantages__description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+      </li>
+      <li class="advantages__item">
+        <p class="advantages__offer">Сувениры/p>
+        <p class="advantages__description">Не только китайского, но и местного производства!</p>
+      </li>
+      <li class="advantages__item">
+        <p class="advantages__offer">Еда</p>
+        <p class="advantages__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+      </li>
+    </ul>
+  </section>
+  <section> <!--    Если придётся добавлять картинки - придётся добавлять классы к секшнам-->
+    <div class="goal">
+      <p class="goal__title">Там есть мост дьявола</p>
+      <p class="goal__number">-№2-</p>
+      <p class="goal__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+    </div>
+    <img src="" alt="" class="advantages__pic">
+  </section>
+  <section>
+    <div class="goal">
+      <p class="goal__title">Небольшая площадь</p>
+      <p class="goal__number">-№3-</p>
+      <p class="goal__description">Все интересные места находятся очень близко</p>
+    </div>
+  </section>
+  <section>
+    <div class="goal">
+      <p class="goal__title">Красивая дорога</p>
+      <p class="goal__number">-№4-</p>
+      <p class="goal__description">Ехать в Седону из Лас-Вегаса - совсем не скучно!</p>
+    </div>
+  </section>
+  <section>
+    <div class="goal">
+      <p class="goal__title">Мало туристов</p>
+      <p class="goal__number">-№3-</p>
+      <p class="goal__description">Большинство едет в Гранд Каньон и толпится там</p>
+    </div>
+  </section>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
-
-  </body>
+</main>
+<!--<p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>-->
+</body>
+<footer>
+  <p class="footer__slogan"></p>
+  <ul class="footer__social">
+    <li class="footer__facebook"></li>
+    <li class="footer__vk"></li>
+    <li class="footer__twitter"></li>
+  </ul>
+  <div class="footer__copyright"></div>
+</footer>
 </html>
