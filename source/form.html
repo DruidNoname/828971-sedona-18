@@ -27,6 +27,47 @@
             <p class="about-page__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещённых вами достопримечательностях</p>
         </div>
     </section>
+    <section class="interview">
+        <form action="https://echo.htmlacademy.ru" class="interview__form">
+
+            <div class="introduction">
+                <h2  class="introduction__title">Представьтесь:</h2>
+                <label for="firstname" action="" class="introduction__label">Имя<sup>*</sup>:<input class="introduction__item" id="firstname" type="text" required></label>
+                <label for="lastname" class="introduction__label">Фамилия<sup>*</sup>:<input class="introduction__item" id="lastname" type="text" required></label>
+                <label for="patronym" class="introduction__label">Отчество:<input class="introduction__item" id="patronym" type="text"></label>
+            </div>
+
+            <div class="contacts">
+                <h2 class="introduction__title"></h2>
+                <label for="phone-number" class="contacts__label">Контактный телефон<sup>*</sup>:<input id="phone-number" type="tel" class="contacts__item" placeholder="Введите телефон">
+                </label>
+                <label for="e-mail" class="contacts__label">Электронная почта<sup>*</sup>:<input id="e-mail" type="email" class="contacts__item" placeholder="Введите e-mail">
+                </label>
+            </div>
+
+            <div class="impression">
+                <h2 class="impression__title">Ваше общее впечатление</h2>
+                <label for="positive" class="impression__label"><input type="radio" id="positive" name="traveler-mark" class="impression__item" checked>Скорее положительное</label>
+                <label for="negative" class="impression__label"><input type="radio" id="negative" name="traveler-mark"  class="impression__item">Скорее отрицательное</label>
+                <label for="confused" class="impression__label"><input type="radio" id="confused" name="traveler-mark" class="impression__item">Затрудняюсь ответить</label>
+            </div>
+
+            <div class="visited">
+                <h2 class="visited__title">Посещённые достопримечательности</h2>
+                <label for="bridge" class="visited__label"><input type="checkbox" id="bridge" name="bridge" class="visited__item" checked>Мост Дьявола</label>
+                <label for="hill" class="visited__label"><input type="checkbox" id="hill" name="hill"  class="visited__item" checked>Гора-Колокол</label>
+                <label for="park" class="visited__label"><input type="checkbox" id="park" name="park" class="visited__item" checked>Слайд-парк</label>
+                <label for="rocks" class="visited__label"><input type="checkbox" id="rocks" name="rocks" class="visited__item">Красные скалы</label>
+            </div>
+
+            <div class="describe-emotions">
+                <h2 class="describe-emotions__title">Опишите свои эмоции</h2>
+                <textarea class="describe-emotions__item" name="comment" rows="6">Опишите подробно все свои восторги</textarea>
+            </div>
+
+            <input type="submit" class="button interview__button" value="Отправить отзыв">
+        </form>
+    </section>
 </main>
 <footer class="footer">
     <p class="footer__slogan"></p>
