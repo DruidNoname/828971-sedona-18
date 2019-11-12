@@ -1,0 +1,22 @@
+.page-header {
+  background: $primary-bg-color;
+  color: #ffffff;
+  font-family: 'PTSans', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+}
+
+.main-nav {
+  background: $primary-bg-color;
+  text-transform: uppercase;
+}
+
+.main-nav__wrapper {
+  text-align: center;
+  list-style: none;
+}
+
+.main-nav__item{
+  padding: 1.18em 0;
+  box-shadow: 0px 1px 0 0 rgba(1, 1, 1, 0.2), inset 0px 1px 0 0 rgba(255, 255, 255, 0.2);
+
+}
