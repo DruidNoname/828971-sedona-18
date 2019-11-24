@@ -1,0 +1,14 @@
+.main-banner {
+  width: auto;
+  background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@1x.jpg");
+  background-position: 0% 100%, left top;
+  background-size: contain, cover;
+  background-repeat: no-repeat;
+  padding: 1px 0;
+}
+
+.main-banner__slogan {
+  display: block;
+  max-width: 100%;
+  margin: 90px auto;
+}

@@ -1,5 +1,16 @@
-@import "fonts.scss";
-@import "variables.scss";
-@import "mixins.scss";
-@import "page-header.scss";
-
+@import "normalize";
+@import "fonts";
+@import "variables";
+@import "mixins";
+@import "global";
+@import "button";
+@import "page-header";
+@import "main-nav";
+@import "main-banner";
+@import "about-page";
+@import "goal";
+@import "advantages-list";
+@import "impulse";
+@import "photo-cell";
+@import "video";
+@import "footer";
