@@ -18,8 +18,10 @@
   }
 }
 
-.goal:last-child .goal_gray-style::after {
-  border-bottom: 1px solid red;
+.goal:last-child {
+  .goal_gray-style::after {
+    border-bottom: 1px solid red;
+  }
 }
 
 .goal__title {
@@ -41,3 +43,4 @@
   min-height: 260px;
   width: 100%;
 }
+
