@@ -1,0 +1,28 @@
+.photo-cell {
+  padding: 20px;
+  border-top: 1px solid rgba($simply-gray, 0.1);
+}
+
+.photo-cell__pic {
+  margin: 2px auto;
+}
+
+
+.photo-cell__title {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.photo-cell__likes {
+  font-weight: 700;
+  margin: 19px 0 23px;
+
+  &::before {
+    display: inline-block;
+    content: "";
+    width: 23px;
+    height: 21px;
+    margin-right: 14px;
+    background: url("../img/icon-like.svg") 0 0/ cover no-repeat;
+  }
+}

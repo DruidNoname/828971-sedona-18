@@ -1,0 +1,45 @@
+.goal__content {
+  background: $simply-blue;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.goal_gray-style {
+  background-color: rgba($simply-gray, 0.1);
+  color: #000000;
+
+  &::after {
+    display: block;
+    content: "";
+    border-bottom: 1px solid rgba($simply-gray, 0.3);
+    margin: 0 auto;
+    width: calc(100% - 40px);
+  }
+}
+
+.goal:last-child {
+  .goal_gray-style::after {
+    border-bottom: 1px solid red;
+  }
+}
+
+.goal__title {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 61px 33px 0;
+}
+
+.goal__number {
+  padding: 10px 28px 0;
+}
+
+.goal__description {
+  padding: 10px 28px 45px;
+}
+
+
+.goal__pic {
+  min-height: 260px;
+  width: 100%;
+}

@@ -1,0 +1,35 @@
+.footer {
+  text-transform: uppercase;
+}
+
+.footer__slogan {
+  font-size: 21px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__sotial-item {
+  display: flex;
+  justify-content: center;
+  flex-basis: 47px;
+  min-height: 48px;
+  background: #81b3d2;
+  color: #ffffff;
+  margin: 6px;
+}
+
+.footer__trademark {
+  display: flex;
+  justify-content: center;
+  margin: 51px auto 23px;
+}
+
+.footer__logo-academy {
+  width: 27px;
+  height: auto;
+}
