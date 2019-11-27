@@ -1,0 +1,68 @@
+.interview {
+  margin: 0 20px;
+}
+
+.interview__form-block {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba($simply-gray, 0.1);
+}
+
+.interview__title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 25px 0;
+  align-self: center;
+}
+
+.interview__label {
+  display: block;
+}
+
+.interview__label_accented {
+  text-transform: uppercase;
+}
+
+.interview__aligner {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  .interview__label_accented {
+    margin-right: 10px;
+  }
+}
+
+.interview__label,
+.interview__input_separate {
+  margin-bottom: 20px;
+}
+
+.interview__input {
+  flex-grow: 1;
+  background: rgba($simply-gray, 0.1);
+  border: none;
+  max-width: 100%;
+  padding: 15px 0;
+  padding-left: 20px;
+}
+
+.interview__switcher-label {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.interview__switcher {
+  margin-right: 10px;
+}
+
+.interview__input_textarea {
+  padding-right: 20px;
+}
+
+.interview__button {
+  width: 100%;
+  border: none;
+}
