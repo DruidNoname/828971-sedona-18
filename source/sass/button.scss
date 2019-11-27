@@ -1,9 +1,10 @@
 .button {
-  display: inline-block;
+  display: block;
   background: $simply-blue;
   color: #ffffff;
+  text-transform: uppercase;
   font-size: 21px;
   font-weight: 700;
-  padding: 17px 47px 19px;
+  padding: 17px 0 19px;
   margin: 40px auto 50px;
 }
