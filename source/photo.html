@@ -14,10 +14,10 @@
       <li class="main-nav__item"><a>Фото и видео</a></li>
       <li class="main-nav__item"><a href="form.html">Форма отзыва</a></li>
       <li class="main-nav__item"><a href="https://htmlacademy.ru/">HTML Academy</a></li>
+      <li><a class="main-nav__logo"><img src="img/logo-sedona-mobile.svg" alt="" class="main-nav__logo-image"></a></li>
     </ul>
   </nav>
   <div class="page-header__bar">
-    <a href="" class="page-header__logo"><img src="img/logo-sedona-mobile.svg" alt="" class="page-header__logo-image"></a>
     <button class="page-header__toggle-button"><img class="page-header__ham" src="img/icon-menu.svg" alt=""></button>
   </div>
 </header>
@@ -34,36 +34,49 @@
   <section class="gallery"> <!--    Не уверена, что это здесь нужно...-->
     <div class="photo-cell">
       <img src="img/photo-sunset-mobile@1x.jpg" alt="" class="photo-cell__pic">
-      <p class="photo-cell__title">Неродные просторы</p>
-      <p class="photo-cell__autor">Автор фото: Борис </p>
-      <p class="photo-cell__likes">1350</p><!--    Здесь будет псевдоэлемент before (но это неточно)-->
+      <div class="photo-cell__pic-info">
+        <div class="photo-cell__about-pic"><p class="photo-cell__title">Неродные просторы</p>
+          <p class="photo-cell__autor">Автор фото: Борис </p>
+        </div>
+        <p class="photo-cell__likes">1350</p>
+      </div><!--    Здесь будет псевдоэлемент before (но это неточно)-->
     </div>
     <div class="photo-cell">
       <img src="img/photo-cactus-mobile@1x.jpg" alt="" class="photo-cell__pic">
-      <p class="photo-cell__title">Местная растительность</p>
-      <p class="photo-cell__autor">Автор фото: Сергей</p>
-      <p class="photo-cell__likes">143</p>
+      <div class="photo-cell__pic-info">
+        <div class="photo-cell__about-pic"><p class="photo-cell__title">Местная растительность</p>
+          <p class="photo-cell__autor">Автор фото: Сергей</p></div>
+        <p class="photo-cell__likes">143</p>
+      </div>
     </div>
     <div class="photo-cell">
       <img src="img/photo-roads-mobile@1x.jpg" alt="" class="photo-cell__pic">
-      <p class="photo-cell__title">Дорога на север</p>
-      <p class="photo-cell__autor">Автор фото: Пётр</p>
-      <p class="photo-cell__likes">96</p>
+      <div class="photo-cell__pic-info">
+        <div class="photo-cell__about-pic"><p class="photo-cell__title">Дорога на север</p>
+          <p class="photo-cell__autor">Автор фото: Пётр</p></div>
+        <p class="photo-cell__likes">96</p>
+      </div>
     </div>
     <div class="photo-cell">
       <img src="img/photo-bridge-mobile@1x.jpg" alt="" class="photo-cell__pic">
-      <p class="photo-cell__title">Мост дьявола</p>
-      <p class="photo-cell__autor">Автор фото: Антон</p>
-      <p class="photo-cell__likes">254</p>
+      <div class="photo-cell__pic-info">
+        <div class="photo-cell__about-pic"><p class="photo-cell__title">Мост дьявола</p>
+          <p class="photo-cell__autor">Автор фото: Антон</p></div>
+        <p class="photo-cell__likes">254</p>
+      </div>
     </div>
   </section>
   <section class="impulse">
-    <div class="impulse__question">Всё ещё сомневаетесь?</div>
-    <div class="impulse__action">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</div>
+    <div class="impulse__wrapper">
+      <div class="impulse__question">Всё ещё сомневаетесь?</div>
+      <div class="impulse__action">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной
+        раз!
+      </div>
+    </div>
     <div class="video-player"></div> <!--Здесь будет видос-->
     <div class="video">
       <div class="video-interface">
-        <img src="img/video-mobile@1x.jpg" alt="">
+        <img class="video__intro" src="img/video-mobile@1x.jpg" alt="">
         <div class="video-interface__navbar"></div>
         <div class="video-interface__controls">
           <div class="video-interface__controller"></div>
@@ -77,9 +90,9 @@
 <footer class="footer">
   <p class="footer__slogan">#Visitsedona</p>
   <div class="footer__social">
-    <div class="footer__sotial-item footer__twitter"><img src="img/icon-twitter.svg" alt=""></div>
-    <div class="footer__sotial-item footer__facebook"><img src="img/icon-facebook.svg" alt=""></div>
-    <div class="footer__sotial-item footer__youtube"><img src="img/icon-youtube.svg" alt=""></div>
+    <div class="footer__social-item footer__twitter"><img src="img/icon-twitter.svg" alt=""></div>
+    <div class="footer__social-item footer__facebook"><img src="img/icon-facebook.svg" alt=""></div>
+    <div class="footer__social-item footer__youtube"><img src="img/icon-youtube.svg" alt=""></div>
   </div>
   <div class="footer__trademark">Разработано <img class="footer__logo-academy" src="img/htmlacademy.svg" alt=""></div>
 </footer>

@@ -3,6 +3,7 @@
 }
 
 .footer__slogan {
+  margin: 41px 0;
   font-size: 21px;
   font-weight: 700;
   text-align: center;
@@ -13,23 +14,40 @@
   justify-content: center;
 }
 
-.footer__sotial-item {
+.footer__social-item {
   display: flex;
   justify-content: center;
   flex-basis: 47px;
-  min-height: 48px;
+  height: 48px;
   background: #81b3d2;
   color: #ffffff;
   margin: 6px;
 }
 
 .footer__trademark {
+  margin: 40px 0 23px;
   display: flex;
   justify-content: center;
-  margin: 51px auto 23px;
+  align-items: center;
 }
 
 .footer__logo-academy {
   width: 27px;
   height: auto;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .footer__social {
+    flex-basis: 30%;
+  }
+
+  .footer__trademark {
+    margin: 0;
+  }
 }

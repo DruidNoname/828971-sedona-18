@@ -4,9 +4,8 @@
 }
 
 .photo-cell__pic {
-  margin: 2px auto;
+  margin: 2px auto; //чтобы пиксели совпали с макетом
 }
-
 
 .photo-cell__title {
   text-transform: uppercase;
@@ -24,5 +23,53 @@
     height: 21px;
     margin-right: 14px;
     background: url("../img/icon-like.svg") 0 0/ cover no-repeat;
+  }
+}
+
+@media (min-width: 768px) {
+  .photo-cell {
+    padding: 0;
+    border-top: none;
+    flex-basis: 50%;
+  }
+
+  .photo-cell:first-child {
+    flex-basis: 100%;
+  }
+
+  .photo-cell__pic {
+    margin: 0;
+    width: 100%;
+  }
+
+  .photo-cell__about-pic {
+    padding-left: 20px;
+  }
+
+  .photo-cell__likes {
+    padding-right: 20px;
+  }
+
+  .photo-cell__pic-info {
+    display: flex;
+    justify-content: space-between;
+    background: #eaeaea;
+  }
+}
+
+@media (min-width: 1200px) {
+  .photo-cell {
+    position: relative;
+    flex-basis: 33%;
+    flex-grow: 1;
+  }
+
+  .photo-cell__pic-info {
+    background: rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
 }

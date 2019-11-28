@@ -23,3 +23,18 @@
   padding: 43px 33px 0;
   font-size: 14px;
 }
+
+@media (min-width: 768px) {
+  .about-page {
+    max-width: 550px;
+    margin: 0 auto;
+  }
+
+  .about-page__what-is {
+    font-size: 21px;
+  }
+
+  .about-page__description {
+    padding-bottom: 55px;
+  }
+}

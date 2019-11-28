@@ -1,3 +1,14 @@
 .advantages-list {
   margin: 41px 0;
 }
+
+.advantages-list__item {
+  @include no-list;
+}
+
+@media (min-width: 768px) {
+  .advantages-list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
