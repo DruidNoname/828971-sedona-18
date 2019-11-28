@@ -6,8 +6,8 @@
 }
 
 .main-nav__wrapper {
-  text-align: center;
   @include no-list;
+  text-align: center;
 }
 
 .main-nav__item {
