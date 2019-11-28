@@ -4,6 +4,7 @@
   background-position: 50% bottom;
   background-size: cover;
   background-repeat: no-repeat;
+  line-height: 1;
   padding: 1px 0;
 }
 
@@ -11,4 +12,22 @@
   display: block;
   max-width: 100%;
   margin: 90px auto;
+}
+
+@media (min-width: 768px) {
+  .main-banner {
+    background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@1x.jpg");
+    background-position: 40% bottom;
+    background-size: contain, cover;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-banner {
+    background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@1x.jpg");
+    background-position: 40% bottom;
+    background-size: contain, cover;
+    background-repeat: no-repeat;
+  }
 }
