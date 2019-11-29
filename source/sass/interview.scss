@@ -6,6 +6,7 @@
   display: flex;
   flex-direction: column;
   border-top: 1px solid rgba($simply-gray, 0.1);
+  margin-bottom: 75px;
 }
 
 .interview__title {
@@ -13,7 +14,7 @@
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 25px 0;
+  margin: 25px 0;
   align-self: center;
 }
 
@@ -21,28 +22,33 @@
   display: block;
 }
 
-.interview__label_accented {
+.interview__label_accented { //для больших буков в лейбле (они не везде)
   text-transform: uppercase;
 }
 
-.interview__aligner {
+.interview__aligner { //чтобы поля в имени-отчестве выравнивались на всю ширину без проблем
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 20px; //просто чтобы строки не слипались
 
   .interview__label_accented {
-    margin-right: 10px;
+    margin-right: 10px; //отступ от лейблов
   }
 }
 
-.interview__label,
+.interview__contacts-wrapper { //обёртка для контактной информации, понадобится позже, пока выравнивает
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.interview__label, //просто отступы в мобильной вёрстке
 .interview__input_separate {
   margin-bottom: 20px;
 }
 
 .interview__input {
-  flex-grow: 1;
-  background: rgba($simply-gray, 0.1);
+  flex-grow: 1; //чтобы поля растягивались по всей оставшейся ширине
+  background: rgba($simply-gray, 0.2);
   border: none;
   max-width: 100%;
   padding: 15px 0;
@@ -58,11 +64,168 @@
   margin-right: 10px;
 }
 
+.interview__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  .interview__switcher-label {
+    flex-basis: 100%;
+  }
+}
+
 .interview__input_textarea {
   padding-right: 20px;
 }
 
 .interview__button {
-  width: 100%;
-  border: none;
+  .button {
+    width: 100%;
+    border: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .interview {
+    margin: 0 60px;
+  }
+
+  .interview__form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .interview__form-block:first-child,
+  .interview__form-block:nth-last-child(4) {
+    flex-basis: 49%;
+  }
+
+  .interview__form-block:nth-last-child(4) {
+    order: -1;
+    border-right: 1px solid rgba($simply-gray, 0.2);
+  }
+
+  .interview__form-block {
+    flex-basis: 100%;
+    border-top: none;
+  }
+
+  .interview__title_decorate {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 25px;
+  }
+
+  .interview__title {
+    display: inline-block; //чтобы тексты встали норм между гор. линеечками
+    font-size: 21px;
+    max-width: 300px; //чтобы достопримечательности перенеслись на другую строку
+  }
+
+  .interview__title_decorate::before, //гор. линеечки
+  .interview__title_decorate::after {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 1px;
+    background: rgba($simply-gray, 0.2);
+    line-height: 1em;
+    top: 50%;
+  }
+
+  .interview__title_decorate::before {
+    left: 0;
+  }
+
+  .interview__title_decorate::after {
+    right: 0;
+  }
+
+
+  .interview__input_separate { //я забыла, зачем вводила этот класс >_<
+    flex-basis: 100%;
+  }
+
+  .interview__switcher-label,
+  .interview__input_textarea {
+    font-size: 18px;
+  }
+
+  .interview__list {
+    justify-content: center;
+    margin: 0 auto;
+
+    .interview__switcher-label {
+      flex-basis: 48%;
+    }
+  }
+
+  .interview__button { //контейнер для кнопки со сноской-псевдоэлементом
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: flex-start;
+    margin: 58px 0;
+    width: 100%;
+
+    &::after { //тоже флекс-элемент
+      display: inline-block;
+      text-align: right;
+      text-transform: uppercase;
+      color: #000000;
+      font-size: 14px;
+      content: "* - обязательные поля";
+      width: 300px;
+      height: 1em;
+    }
+
+    .button {
+      width: 50%;
+      border: none;
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .interview {
+    margin: 0 120px;
+  }
+
+  .interview__contacts-wrapper {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .interview__input_separate { //я забыла, зачем вводила этот класс >_<
+    flex-basis: auto;
+    margin-left: 16px;
+  }
+
+  .interview__form-block:first-child,
+  .interview__form-block:nth-last-child(4) {
+    flex-basis: 49%;
+
+    .interview__title {
+      margin: 25px 0; //это марджин для заголовка без гор. линеечки
+    }
+  }
+
+  .interview__title_decorate::before,
+  .interview__title_decorate::after {
+    width: 300px;
+  }
+
+  .interview__list {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 25px 0; //это марджин для заголовка с гор. линеечкой, применённый к контейнеру, чтобы линеечка осталась в центре букв
+
+    .interview__switcher-label {
+      flex-basis: auto;
+    }
+  }
 }
