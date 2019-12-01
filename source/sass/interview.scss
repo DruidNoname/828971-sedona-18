@@ -1,12 +1,8 @@
-.interview {
-  margin: 0 20px;
-}
-
 .interview__form-block {
   display: flex;
   flex-direction: column;
   border-top: 1px solid rgba($simply-gray, 0.1);
-  margin-bottom: 75px;
+  padding: 0 20px;
 }
 
 .interview__title {
@@ -198,6 +194,7 @@
   .interview__contacts-wrapper {
     flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: center;
   }
 
   .interview__input_separate { //я забыла, зачем вводила этот класс >_<

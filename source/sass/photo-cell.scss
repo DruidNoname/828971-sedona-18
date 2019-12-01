@@ -3,6 +3,10 @@
   border-top: 1px solid rgba($simply-gray, 0.1);
 }
 
+.photo-cell:last-child {
+  border-bottom: 1px solid rgba($simply-gray, 0.1);
+}
+
 .photo-cell__pic {
   margin: 2px auto; //чтобы пиксели совпали с макетом
 }
