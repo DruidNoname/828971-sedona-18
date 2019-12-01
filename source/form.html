@@ -44,11 +44,15 @@
                 </div>
 
                 <div class="interview__form-block">
-                    <h2 class="interview__title">Контактная информация</h2>
-                    <label for="phone-number" class="interview__label interview__label_accented">Контактный телефон<sup>*</sup>:</label>
-                    <input id="phone-number" type="tel" class="interview__input interview__input_separate" placeholder="Введите телефон">
-                    <label for="e-mail" class="interview__label interview__label_accented">Электронная почта<sup>*</sup>:</label>
-                    <input id="e-mail" type="email" class="interview__input interview__input_separate" placeholder="Введите e-mail">
+                    <div class="interview__title_decorate"><h2 class="interview__title">Контактная информация</h2></div>
+                    <div class="interview__contacts-wrapper">
+                        <label for="phone-number" class="interview__label interview__label_accented">Контактный
+                        телефон<sup>*</sup>:</label>
+                        <input id="phone-number" type="tel" class="interview__input interview__input_separate" placeholder="Введите телефон">
+                        <label for="e-mail" class="interview__label interview__label_accented">Электронная
+                            почта<sup>*</sup>:</label>
+                        <input id="e-mail" type="email" class="interview__input interview__input_separate" placeholder="Введите e-mail">
+                    </div>
                 </div>
 
                 <div class="interview__form-block">
@@ -59,18 +63,24 @@
                 </div>
 
                 <div class="interview__form-block">
-                    <h2 class="interview__title">Посещённые достопримечательности</h2>
-                    <label for="bridge" class="interview__switcher-label"><input type="checkbox" id="bridge" name="bridge" class="interview__switcher" checked>Мост Дьявола</label>
-                    <label for="hill" class="interview__switcher-label"><input type="checkbox" id="hill" name="hill"  class="interview__switcher" checked>Гора-Колокол</label>
-                    <label for="park" class="interview__switcher-label"><input type="checkbox" id="park" name="park" class="interview__switcher" checked>Слайд-парк</label>
-                    <label for="rocks" class="interview__switcher-label"><input type="checkbox" id="rocks" name="rocks" class="interview__switcher">Красные скалы</label>
+                    <div class="interview__title_decorate"><h2 class="interview__title">Посещённые достопримечательности</h2></div>
+                    <div class="interview__list">
+                        <label for="bridge" class="interview__switcher-label"><input type="checkbox" id="bridge"
+                                                                                    name="bridge"
+                                                                                    class="interview__switcher" checked>Мост
+                        Дьявола</label>
+                        <label for="hill" class="interview__switcher-label"><input type="checkbox" id="hill" name="hill" class="interview__switcher" checked>Гора-Колокол</label>
+                        <label for="park" class="interview__switcher-label"><input type="checkbox" id="park" name="park" class="interview__switcher" checked>Слайд-парк</label>
+                        <label for="rocks" class="interview__switcher-label"><input type="checkbox" id="rocks" name="rocks" class="interview__switcher">Красные
+                            скалы</label>
+                    </div>
                 </div>
 
                 <div class="interview__form-block">
-                    <h2 class="interview__title">Опишите свои эмоции</h2>
+                    <div class="interview__title_decorate"><h2 class="interview__title">Опишите свои эмоции</h2></div>
                     <textarea class="interview__input interview__input_textarea" name="comment" rows="6">Опишите подробно все свои восторги</textarea>
                 </div>
-                <input type="submit" class="button interview__button" value="Отправить отзыв">
+                <div class="interview__button"><input type="submit" class="button" value="Отправить отзыв"></div>
             </form>
         </section>
     </main>
