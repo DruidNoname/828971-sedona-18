@@ -3,38 +3,44 @@
   text-align: center;
   line-height: 26px;
   text-transform: uppercase;
+  margin: 45px auto 10px;
+}
 
-  &::after {//здесь пока не понятно, как, потому, что svg
-    display: none;
-    content: "";
-    background: url("../img/bg-triangle.svg") top left/cover no-repeat;
-    height: 43px;
-    width: auto;
-  }
+.about-page__triangle {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: auto;
 }
 
 .about-page__what-is {
-  padding: 43px 33px 0;
   font-size: 18px;
   font-weight: 700;
+  padding: 0 32px; //из-за треугольника не получается задать размеры, используя родительский контейнер
 }
 
 .about-page__description {
-  padding: 43px 33px 0;
-  font-size: 14px;
+  color: $simply-gray;
+  padding: 0 32px;
+  margin-top: 22px; //это надо для соблюдения пиксель перфект
 }
 
 @media (min-width: 768px) {
   .about-page {
-    max-width: 550px;
-    margin: 0 auto;
+    max-width: 490px;
+    margin: 51px auto 55px;
   }
 
   .about-page__what-is {
     font-size: 21px;
+    padding: 0;
   }
 
   .about-page__description {
-    padding-bottom: 55px;
+    padding: 0;
+  }
+
+  .about-page__triangle {
+    display: none;
   }
 }

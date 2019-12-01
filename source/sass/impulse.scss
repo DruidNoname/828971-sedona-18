@@ -1,33 +1,32 @@
 .impulse {
   text-align: center;
   text-transform: uppercase;
-}
-
-.impulse__question {
-  font-size: 21px;
-  font-weight: 700;
-  padding: 61px 33px 0;
-}
-
-.impulse__action {
-  padding: 10px 28px 0;
-}
-
-.impulse__button {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.impulse__map {
-  display: block;
-  background-image: url("../img/bg-map-mobile@1x.jpg");
-  background-position: top left;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
+  line-height: 21px;
 }
 
 .impulse__wrapper {
   max-width: 450px;
   margin: 0 auto;
+  padding: 20px 22px 0;
 }
+
+.impulse__question {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.impulse__action {
+  padding-top: 10px;
+}
+
+//.impulse__button {
+//  margin-left: 20px;
+//  margin-right: 20px;
+//}
+
+.impulse__map {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+

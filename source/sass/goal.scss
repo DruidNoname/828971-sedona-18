@@ -4,11 +4,14 @@
   text-align: center;
   text-transform: uppercase;
   line-height: 1.5;
+  padding: 46px 0 49px;
+  margin: 0 auto;
 }
 
 .goal_gray-style {
   background-color: rgba($simply-gray, 0.1);
   color: #000000;
+  padding: 33px 0 0;
 
   &::after {
     display: block;
@@ -16,9 +19,11 @@
     border-bottom: 1px solid rgba($simply-gray, 0.3);
     margin: 0 auto;
     width: calc(100% - 40px);
+    padding-top: 32px;
   }
 
   &:last-child::after {
+    padding-top: 32px;
     border: none;
   }
 }
@@ -26,15 +31,15 @@
 .goal__title {
   font-size: 18px;
   font-weight: 700;
-  padding: 61px 33px 0;
+  padding: 0 46px;
 }
 
 .goal__number {
-  padding: 10px 28px 0;
+  padding: 7px 0;
 }
 
 .goal__description {
-  padding: 10px 28px 45px;
+  padding: 0 48px;
 }
 
 .goal__pic {
