@@ -1,28 +1,29 @@
 .impulse {
   text-align: center;
   text-transform: uppercase;
-  line-height: 21px;
 }
 
 .impulse__wrapper {
   max-width: 450px;
   margin: 0 auto;
-  padding: 20px 22px 0;
+  padding: 24px 21px 0;
 }
 
 .impulse__question {
   font-size: 21px;
   font-weight: 700;
+  line-height: 26px;
+
 }
 
 .impulse__action {
-  padding-top: 10px;
+  line-height: 24px;
+  padding-top: 18px;
 }
 
-//.impulse__button {
-//  margin-left: 20px;
-//  margin-right: 20px;
-//}
+.impulse__button {
+  margin-top: 35px;
+}
 
 .impulse__map {
   display: block;

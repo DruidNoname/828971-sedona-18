@@ -4,14 +4,18 @@
   text-align: center;
   text-transform: uppercase;
   line-height: 1.5;
-  padding: 46px 0 49px;
+  padding: 40px 0;
   margin: 0 auto;
+}
+
+.goal:nth-child(2) .goal__content{
+  padding-top: 72px
 }
 
 .goal_gray-style {
   background-color: rgba($simply-gray, 0.1);
   color: #000000;
-  padding: 33px 0 0;
+  padding: 23px 0 0;
 
   &::after {
     display: block;
@@ -35,11 +39,17 @@
 }
 
 .goal__number {
-  padding: 7px 0;
+  padding-top: 8px;
 }
 
 .goal__description {
-  padding: 0 48px;
+  padding: 16px 29px 0;
+}
+
+.goal_gray-style .goal__description {
+  padding: 0 37px; //здесь паддинги почему-то больше
+  padding-top: 15px;
+  color: $simply-gray;
 }
 
 .goal__pic {

@@ -3,14 +3,19 @@
   text-align: center;
   line-height: 26px;
   text-transform: uppercase;
-  margin: 45px auto 10px;
-}
+  margin: 37px 0 10px;
 
-.about-page__triangle {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: auto;
+  &::after {
+    background: url(../img/bg-triangle.svg);
+    background-position: bottom;
+    display: block;
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 33px;
+    z-index: 100;
+    bottom: -43px;
+  }
 }
 
 .about-page__what-is {
@@ -22,7 +27,7 @@
 .about-page__description {
   color: $simply-gray;
   padding: 0 32px;
-  margin-top: 22px; //это надо для соблюдения пиксель перфект
+  margin-top: 27px; //это надо для соблюдения пиксель перфект
 }
 
 @media (min-width: 768px) {

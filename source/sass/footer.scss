@@ -19,13 +19,13 @@
   justify-content: center;
   flex-basis: 47px;
   height: 48px;
-  background: #81b3d2;
+  background: $simply-blue;
   color: #ffffff;
-  margin: 6px;
+  margin: 0 3px;
 }
 
 .footer__trademark {
-  margin: 40px 0 23px;
+  padding: 40px 0 23px;
   display: flex;
   justify-content: center;
   align-items: center;
