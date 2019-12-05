@@ -1,6 +1,7 @@
 .impulse {
   text-align: center;
-  text-transform: uppercase;
+  @include usual-text;
+  @include usual-text-sizing
 }
 
 .impulse__wrapper {
@@ -22,7 +23,7 @@
 }
 
 .impulse__button {
-  margin-top: 35px;
+  margin-top: 36px;
 }
 
 .impulse__map {
@@ -31,3 +32,18 @@
   height: auto;
 }
 
+@media (min-width: 758px) {
+  .impulse__wrapper {
+    padding: 60px 21px 0;
+  }
+
+  .impulse__question {
+    font-size: 30px;
+    line-height: 26px;
+    padding: 10px 0;
+  }
+
+  .impulse__button {
+    margin-top: 41px;
+  }
+}

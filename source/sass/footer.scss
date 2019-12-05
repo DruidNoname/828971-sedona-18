@@ -1,9 +1,10 @@
 .footer {
-  text-transform: uppercase;
+  @include usual-text;
+  @include usual-text-sizing;
 }
 
 .footer__slogan {
-  margin: 41px 0;
+  margin: 32px 0;
   font-size: 21px;
   font-weight: 700;
   text-align: center;
@@ -25,22 +26,26 @@
 }
 
 .footer__trademark {
-  padding: 40px 0 23px;
+  padding: 36px 0 23px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .footer__logo-academy {
-  width: 27px;
+  width: 40px;
   height: auto;
+  margin-right: -9px;
+  padding-left: 6px;
+
 }
 
 @media (min-width: 768px) {
   .footer {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    margin: 14px 61px;
   }
 
   .footer__social {

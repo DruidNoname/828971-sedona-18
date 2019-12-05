@@ -2,10 +2,9 @@
   background: $simply-blue;
   color: #ffffff;
   text-align: center;
-  text-transform: uppercase;
-  line-height: 1.5;
+  @include usual-text;
+  @include usual-text-sizing;
   padding: 40px 0;
-  margin: 0 auto;
 }
 
 .goal:nth-child(2) .goal__content{
@@ -15,7 +14,7 @@
 .goal_gray-style {
   background-color: rgba($simply-gray, 0.1);
   color: #000000;
-  padding: 23px 0 0;
+  padding: 25px 0 0;
 
   &::after {
     display: block;
@@ -23,7 +22,7 @@
     border-bottom: 1px solid rgba($simply-gray, 0.3);
     margin: 0 auto;
     width: calc(100% - 40px);
-    padding-top: 32px;
+    padding-top: 28px;
   }
 
   &:last-child::after {
@@ -35,7 +34,7 @@
 .goal__title {
   font-size: 18px;
   font-weight: 700;
-  padding: 0 46px;
+  padding: 0 53px;
 }
 
 .goal__number {
@@ -45,6 +44,7 @@
 .goal__description {
   padding: 16px 29px 0;
 }
+
 
 .goal_gray-style .goal__description {
   padding: 0 37px; //здесь паддинги почему-то больше
@@ -71,10 +71,22 @@
     flex-wrap: wrap;
   }
 
+  .goal:nth-child(2) .goal__content{
+    padding-top: 45px;
+  }
+
   .goal__content {
     flex-basis: 33%;
     flex-grow: 1;
+    padding-top: 45px;
   }
+
+
+
+  .goal__description {
+    padding: 23px 45px 0; //для правильного выравнивания по строкам
+  }
+
 
   .goal__pic {
     flex-basis: 66%;
@@ -89,13 +101,23 @@
 
   .goal__title {
     font-size: 21px;
+    line-height: 26px;
   }
 
   .goal_gray-style {
-    .goal__title,
-    .goal__description {
+    padding-top: 40px;
+
+    .goal__title {
       padding-left: 55px;
       padding-right: 55px;
+    }
+
+    .goal__number {
+      padding-top: 10px;
+    }
+
+    .goal__description {
+      padding: 20px 48px 0;
     }
 
     &::after {

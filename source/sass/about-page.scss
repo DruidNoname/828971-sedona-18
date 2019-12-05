@@ -1,8 +1,9 @@
 .about-page {
   position: relative;
   text-align: center;
+  @include usual-text;
+  font-size: 14px;
   line-height: 26px;
-  text-transform: uppercase;
   margin: 37px 0 10px;
 
   &::after {
@@ -33,7 +34,7 @@
 @media (min-width: 768px) {
   .about-page {
     max-width: 490px;
-    margin: 51px auto 55px;
+    margin: 51px auto 50px;
   }
 
   .about-page__what-is {

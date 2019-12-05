@@ -3,39 +3,79 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @include usual-text;
+  @include usual-text-sizing;
   margin: 28px 0 15px;
 
 }
 
 .advantages-list__item {
-  margin: 0 23px;
-  text-transform: uppercase;
-  background: url("../img/icon-house.svg") no-repeat top left/13%;
-  padding-left: 47px;
-  padding-bottom: 24px;
+  margin: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-bottom: 20px; //для пиксельперфекта
 
-  &:nth-child(2) {
-    background: url("../img/icon-gift.svg") no-repeat top left/13%;
+  &::before {
+    content: "";
+    background: url("../img/icon-house.svg") no-repeat top left/75%;
+    padding-left: 50px;
+    height: 43px;
   }
 
-  &:nth-child(3) {
-    background: url("../img/icon-burger.svg") no-repeat top left/13%;
+  &:nth-child(2)::before {
+    background: url("../img/icon-gift.svg") no-repeat 30% 0%/62%;
+  }
+
+  &:nth-child(3)::before {
+    background: url("../img/icon-burger.svg") no-repeat -13% 37%/77%;
   }
 }
 
-.advantages-list__offer{
+.advantages-list__offer {
   font-size: 18px;
-  padding-top: 10px;
-  margin-bottom: 17px;
   font-weight: 700;
+
 }
+
 .advantages-list__description {
-  line-height: 20px;
+  padding-left: 50px;
+  padding-top: 5px;
 }
 
 @media (min-width: 768px) {
   .advantages-list {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    height: 284px; //внимание, временный параметр. Нужен для дальнейшей разметки блоков
   }
+
+  .advantages-list__item {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    &::before {
+      content: "";
+      background: url("../img/icon-house.svg") no-repeat 50%/50%;
+      width: 80px;
+      height: 80px;
+    }
+
+    &:nth-child(2)::before {
+      background: url("../img/icon-gift.svg") no-repeat 50%/50%;
+    }
+
+    &:nth-child(3)::before {
+      background: url("../img/icon-burger.svg") no-repeat 50%/50%;
+    }
+  }
+
+  .advantages-list__item:nth-child(2) {
+    order: 1;
+  }
+
+
 }

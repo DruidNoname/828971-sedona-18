@@ -1,8 +1,8 @@
 .main-nav {
   background: $simply-blue;
   color: #ffffff;
-  text-transform: uppercase;
   font-weight: 700;
+  @include usual-text
 }
 
 .main-nav__wrapper {
