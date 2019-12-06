@@ -115,12 +115,12 @@
   }
 
   .interview__title {
-    display: inline-block; //чтобы тексты встали норм между гор. линеечками
+    display: inline-block; //чтобы тексты встали норм между горизонтальными линеечками
     font-size: 21px;
     max-width: 300px; //чтобы достопримечательности перенеслись на другую строку
   }
 
-  .interview__title_decorate::before, //гор. линеечки
+  .interview__title_decorate::before, //собственно горизонтальные линеечки
   .interview__title_decorate::after {
     display: inline-block;
     position: absolute;
