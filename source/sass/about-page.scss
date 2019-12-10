@@ -20,14 +20,13 @@
   }
 }
 
-.about-page_simple {
+.about-page_secondary-pages {
   margin: 40px 0 25px;
-  line-height: 25px; //для пп
+
   &::after {
     display: none;
   }
 }
-
 
 .about-page__what-is {
   font-size: 18px;
@@ -51,6 +50,18 @@
     }
   }
 
+  .about-page_secondary-pages {
+    margin: 74px auto 68px; //пп
+
+    .about-page__what-is {
+      font-size: 30px;
+    }
+
+    .about-page__description {
+      margin-top: 28px;
+    }
+  }
+
   .about-page__what-is {
     font-size: 21px;
     padding: 0;
@@ -58,5 +69,11 @@
 
   .about-page__description {
     padding: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .about-page_secondary-pages {
+    margin: 110px auto 70px; //пп
   }
 }

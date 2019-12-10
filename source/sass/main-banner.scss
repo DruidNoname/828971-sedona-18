@@ -4,7 +4,7 @@
   background-position: 50% bottom;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 0 20px;
+  padding: 50px 20px 65px;
 }
 
 .main-banner__slogan {
@@ -16,7 +16,6 @@
 
 .main-banner_short-version {
   max-width: 83%;
-  padding: 50px 0 65px;
 }
 
 
@@ -32,6 +31,10 @@
     padding-top: 83px;
     padding-bottom: 90px; //для пиксельперфекта
   }
+
+  .main-banner_short-version {
+    padding: 100px 0 115px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -40,5 +43,9 @@
     background-position: 40% bottom;
     background-size: contain, cover;
     background-repeat: no-repeat;
+  }
+
+  .main-banner_short-version {
+    padding: 105px 0 120px;
   }
 }

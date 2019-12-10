@@ -35,8 +35,6 @@
   }
 }
 
-
-
 .impulse__button {
   margin-top: 36px;
 }
@@ -56,6 +54,11 @@
     padding-top: 50px;
   }
 
+  .impulse_secondary-page .impulse__wrapper {
+    padding: 60px 177px 68px; //опять пп
+  }
+
+  .impulse_secondary-page .impulse__question,
   .impulse__question {
     font-size: 30px;
     line-height: 26px;
@@ -75,6 +78,10 @@
 @media (min-width: 1200px) {
   .impulse__wrapper {
     padding-top: 45px;
+  }
+
+  .impulse_secondary-page .impulse__wrapper {
+    padding: 60px 400px 68px; //опять пп
   }
 
   .impulse__button {

@@ -14,7 +14,13 @@
             <li class="main-nav__item"><a href="photo.html">Фото и видео</a></li>
             <li class="main-nav__item"><a>Форма отзыва</a></li>
             <li class="main-nav__item"><a href="https://htmlacademy.ru/">HTML Academy</a></li>
-            <li><a href="" class="main-nav__logo"><img src="img/logo-sedona-mobile.svg" alt="" class="main-nav__logo-image"></a></li>
+            <li><a class="main-nav__logo">
+                <picture class="main-nav__logo-image">
+                    <source srcset="img/logo-sedona-desktop.svg" media="(min-width: 1200px)">
+                    <img src="img/logo-sedona-mobile.svg" alt="">
+                </picture>
+            </a>
+            </li>
         </ul>
     </nav>
     <div class="page-header__bar">
@@ -28,7 +34,7 @@
             <div class="main-banner">
                 <img src="img/text-sedona.svg" class="main-banner__slogan main-banner_short-version" alt="">
             </div>
-            <div class="about-page about-page_simple">
+            <div class="about-page about-page_secondary-pages">
                 <div class="about-page__what-is">Оставьте свой отзыв</div>
                 <div class="about-page__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещённых вами достопримечательностях</div>
             </div>

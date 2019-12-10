@@ -5,3 +5,11 @@
     flex-wrap: wrap;
   }
 }
+
+
+@media (min-width: 1200px) {
+  .gallery {
+    padding: 0;
+  }
+}
+
