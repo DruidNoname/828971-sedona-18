@@ -7,7 +7,7 @@
   @include usual-text;
 
   @include usual-text-sizing;
-  margin: 28px 0 15px;
+  margin: 30px 0 15px;
 }
 
 .advantages-list__item {
@@ -15,11 +15,12 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding-bottom: 20px; //для пиксельперфекта
+  margin-bottom: 20px; //для пиксельперфекта
 }
 
 .advantages-list__icon {
   width: 35px;
+  height: 35px; //авто не подходит
   margin-right: 15px;
 }
 
@@ -30,7 +31,7 @@
 
 .advantages-list__description {
   padding-left: 50px;
-  padding-top: 5px;
+  padding-top: 12px;
 }
 
 @media (min-width: 768px) {
@@ -46,21 +47,6 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     padding: 20px 0;
-
-    &::before {
-      content: "";
-      background: url("../img/icon-house.svg") no-repeat 50%/50%;
-      width: 80px;
-      height: 80px;
-    }
-
-    &:nth-child(2)::before {
-      background: url("../img/icon-gift.svg") no-repeat 50%/50%;
-    }
-
-    &:nth-child(3)::before {
-      background: url("../img/icon-burger.svg") no-repeat 50%/50%;
-    }
   }
 
   .advantages-list__item:nth-child(2) {
