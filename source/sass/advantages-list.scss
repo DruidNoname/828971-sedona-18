@@ -1,12 +1,10 @@
 .advantages-list {
   @include no-list;
+  @include usual-text;
+  @include usual-text-sizing;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  @include usual-text;
-
-  @include usual-text-sizing;
   margin: 30px 0 15px;
 }
 
@@ -91,6 +89,4 @@
     padding-left: 55px;
     padding-right: 55px;
   }
-
-
 }
