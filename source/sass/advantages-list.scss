@@ -39,17 +39,58 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 284px; //внимание, временный параметр. Нужен для дальнейшей разметки блоков
+    margin-bottom: 39px; //для пиксельперфекта
   }
 
   .advantages-list__item {
+    margin: 0 40px;
     flex-direction: column;
     flex-wrap: nowrap;
-    justify-content: space-between;
-    padding: 20px 0;
+    justify-content: flex-start; //только так каждый элемент встаёт на своё место
+    padding: 22px 0;
   }
 
   .advantages-list__item:nth-child(2) {
     order: 1;
   }
+
+  .advantages-list__icon {
+    width: 75px;
+    height: 75px; //авто не подходит. В мобильной вёрстке марджин райт почему-то сносно выравнивает по центру
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .advantages-list__offer {
+    font-size: 21px;
+    line-height: 26px;
+    margin-bottom: 21px;
+  }
+
+  .advantages-list__description {
+    text-align: center;
+    padding-left: 0;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .advantages-list {
+    margin: 37px 0 60px;
+  }
+
+  .advantages-list__item {
+    margin: 0 55px;
+  }
+
+  .advantages-list__icon {
+    margin-bottom: 25px;
+  }
+
+  .goal__description {
+    padding-left: 55px;
+    padding-right: 55px;
+  }
+
+
 }

@@ -45,7 +45,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 14px 61px;
+    margin: 14px 61px 0;
   }
 
   .footer__social {
@@ -54,5 +54,18 @@
 
   .footer__trademark {
     margin: 0;
+    padding-top: 27px; //для пиксельперфекта
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    justify-content: space-around;
+    margin: 11px 0 0;
+  }
+
+  .footer__social {
+    flex-basis: 17%;
+    margin: 0 4px;
   }
 }

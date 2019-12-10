@@ -1,5 +1,9 @@
 .photo-cell {
+  font-family: "PTSans", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
   padding: 20px;
+  padding-bottom: 16px;
   border-top: 1px solid rgba($simply-gray, 0.1);
 }
 
@@ -8,7 +12,7 @@
 }
 
 .photo-cell__pic {
-  margin: 2px auto; //чтобы пиксели совпали с макетом
+  margin: 2px auto 8px; //чтобы пиксели совпали с макетом
 }
 
 .photo-cell__title {
@@ -18,7 +22,7 @@
 
 .photo-cell__likes {
   font-weight: 700;
-  margin: 19px 0 23px;
+  margin-top: 5px;
 
   &::before {
     display: inline-block;

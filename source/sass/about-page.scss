@@ -20,6 +20,15 @@
   }
 }
 
+.about-page_simple {
+  margin: 40px 0 25px;
+  line-height: 25px; //для пп
+  &::after {
+    display: none;
+  }
+}
+
+
 .about-page__what-is {
   font-size: 18px;
   font-weight: 700;
@@ -28,14 +37,18 @@
 
 .about-page__description {
   color: $simply-gray;
-  padding: 0 32px;
-  margin-top: 27px; //это надо для соблюдения пиксель перфект
+  padding: 0 25px;
+  margin-top: 25px; //это надо для соблюдения пиксель перфект
 }
 
 @media (min-width: 768px) {
   .about-page {
     max-width: 490px;
-    margin: 51px auto 50px;
+    margin: 48px auto;
+
+    &::after {
+      display: none;
+    }
   }
 
   .about-page__what-is {
@@ -45,9 +58,5 @@
 
   .about-page__description {
     padding: 0;
-  }
-
-  .about-page__triangle {
-    display: none;
   }
 }

@@ -14,12 +14,23 @@
   padding: 88px 0 86px;
 }
 
+.main-banner_short-version {
+  max-width: 83%;
+  padding: 50px 0 65px;
+}
+
+
 @media (min-width: 768px) {
   .main-banner {
     background-image: url("../img/bg-intro-triangle-tablet.svg"), url("../img/bg-back-tablet@1x.jpg");
     background-position: 40% bottom;
     background-size: contain, cover;
     background-repeat: no-repeat;
+  }
+
+  .main-banner__slogan {
+    padding-top: 83px;
+    padding-bottom: 90px; //для пиксельперфекта
   }
 }
 

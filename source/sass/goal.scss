@@ -81,8 +81,6 @@
     padding-top: 45px;
   }
 
-
-
   .goal__description {
     padding: 23px 45px 0; //для правильного выравнивания по строкам
   }
@@ -105,7 +103,7 @@
   }
 
   .goal_gray-style {
-    padding-top: 40px;
+    padding-top: 42px; //пиксельперфект
 
     .goal__title {
       padding-left: 55px;
@@ -117,7 +115,7 @@
     }
 
     .goal__description {
-      padding: 20px 48px 0;
+      padding: 20px 48px 10px;
     }
 
     &::after {
@@ -127,11 +125,39 @@
 }
 
 @media (min-width: 1200px) {
+  .goal:nth-child(2) .goal__content
+  {
+    padding-top: 58px;
+  }
+
+  .goal__content {
+    padding-top: 55px;
+  }
+
+  .goal_gray-style.goal__content {
+      padding-top: 40px;
+    }
+
+
+  .goal__title,
+  .goal_gray-style .goal__title{
+    padding-left: 125px; //для позиционирования заголовка
+    padding-right: 125px;
+  }
+
   .goal__pic {
     background-image: url("../img/main-city-desktop@1x.jpg");
   }
 
   .goal:nth-child(3) .goal__pic {
     background-image: url("../img/main-bridge-desktop@1x.jpg");
+  }
+
+  .goal_gray-style {
+    padding-top: 42px; //пиксельперфект
+
+    .goal__description {
+      padding: 20px 55px 35px;
+    }
   }
 }

@@ -51,8 +51,8 @@
   }
 }
 
-//@media (min-width: 1200px) {
-//  .main-nav__wrapper {
-//
-//  }
-//}
+@media (min-width: 1200px) {
+  .main-nav__logo {
+    left: calc(50% - 95px);
+  }
+}

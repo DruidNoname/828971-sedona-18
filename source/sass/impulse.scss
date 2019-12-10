@@ -1,11 +1,10 @@
 .impulse {
-  text-align: center;
   @include usual-text;
-  @include usual-text-sizing
+  @include usual-text-sizing;
+  text-align: center;
 }
 
 .impulse__wrapper {
-  max-width: 450px;
   margin: 0 auto;
   padding: 24px 21px 0;
 }
@@ -14,13 +13,29 @@
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
-
 }
 
 .impulse__action {
   line-height: 24px;
   padding-top: 18px;
 }
+
+.impulse_secondary-page { //это потому, что на вспомогательной странице шрифт меньше, чем на главной (да здесь всё, блин, не так!)
+
+  .impulse__wrapper {
+    padding: 32px 23px 36px;
+  }
+
+  .impulse__question {
+    font-size: 18px;
+  }
+
+  .impulse__action {
+    padding-top: 26px;
+  }
+}
+
+
 
 .impulse__button {
   margin-top: 36px;
@@ -32,9 +47,13 @@
   height: auto;
 }
 
+.impulse_content-corrector {
+  display: none; //это костыль. Я так и не придумала, как сделать лучше
+}
+
 @media (min-width: 758px) {
   .impulse__wrapper {
-    padding: 60px 21px 0;
+    padding-top: 50px;
   }
 
   .impulse__question {
@@ -44,6 +63,22 @@
   }
 
   .impulse__button {
-    margin-top: 41px;
+    margin-top: 42px;
+    margin-bottom: 55px;
+  }
+
+  .impulse_content-corrector {
+    display: block; //это костыль. Я так и не придумала, как сделать лучше
+  }
+}
+
+@media (min-width: 1200px) {
+  .impulse__wrapper {
+    padding-top: 45px;
+  }
+
+  .impulse__button {
+    margin-top: 50px;
+    margin-bottom: 63px;
   }
 }
