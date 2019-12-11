@@ -4,19 +4,20 @@
   background: $simply-blue;
   color: #ffffff;
   text-align: center;
+  padding-top: 38px;
 }
 
-.goal:nth-child(2) .goal__content{
-  padding-top: 72px
+.goal:nth-child(2) .goal__content {
+  padding-top: 72px; //здесь паддинг больше из-за белой стрелки вверху
 }
 
 .goal_gray-style {
   background-color: rgba($simply-gray, 0.1);
   color: #000000;
-  padding: 25px 0 0;
+  padding-top: 25px;
 
   &::after {
-    display: block;
+    display: block; //это полосочки
     content: "";
     border-bottom: 1px solid rgba($simply-gray, 0.3);
     margin: 0 auto;
@@ -25,7 +26,7 @@
   }
 
   &:last-child::after {
-    padding-top: 32px;
+    padding-top: 27px; //последней полосочки нет
     border: none;
   }
 }
@@ -34,20 +35,20 @@
   font-size: 18px;
   font-weight: 700;
   padding: 0 53px;
+  margin-bottom: 8px;
 }
 
 .goal__number {
-  padding-top: 8px;
+  margin-bottom: 16px;
 }
 
 .goal__description {
-  padding: 16px 29px 0;
+  padding: 0 29px 40px;
 }
 
 
 .goal_gray-style .goal__description {
   padding: 0 37px; //здесь паддинги почему-то больше
-  padding-top: 15px;
   color: $simply-gray;
 }
 

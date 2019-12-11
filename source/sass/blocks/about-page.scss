@@ -5,7 +5,7 @@
   @include usual-text;
   font-size: 14px;
   line-height: 26px;
-  margin: 40px 0 10px;
+  margin: 38px 0 10px;
 
   &::after {
     background: url("../../img/bg-triangle.svg");
@@ -31,8 +31,8 @@
 .about-page__what-is {
   font-size: 18px;
   font-weight: 700;
-  padding: 0 32px; //из-за треугольника не получается задать размеры, используя родительский контейнер
-  margin-bottom: 28px; //это надо для соблюдения пиксель перфект
+  padding: 0 32px;
+  margin-bottom: 26px; //это надо для соблюдения пиксель перфект
 }
 
 .about-page__description {
