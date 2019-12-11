@@ -8,7 +8,7 @@
   margin: 40px 0 10px;
 
   &::after {
-    background: url("../img/bg-triangle.svg");
+    background: url("../../img/bg-triangle.svg");
     background-position: bottom;
     display: block;
     position: absolute;
@@ -32,18 +32,19 @@
   font-size: 18px;
   font-weight: 700;
   padding: 0 32px; //из-за треугольника не получается задать размеры, используя родительский контейнер
+  margin-bottom: 28px; //это надо для соблюдения пиксель перфект
 }
 
 .about-page__description {
   color: $simply-gray;
   padding: 0 25px;
-  margin-top: 25px; //это надо для соблюдения пиксель перфект
+
 }
 
 @media (min-width: 768px) {
   .about-page {
     max-width: 490px;
-    margin: 48px auto;
+    margin: 50px auto;
 
     &::after {
       display: none;

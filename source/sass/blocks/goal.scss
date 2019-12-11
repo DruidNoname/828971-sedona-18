@@ -1,10 +1,9 @@
 .goal__content {
+  @include usual-text;
+  @include usual-text-sizing;
   background: $simply-blue;
   color: #ffffff;
   text-align: center;
-  @include usual-text;
-  @include usual-text-sizing;
-  padding: 40px 0;
 }
 
 .goal:nth-child(2) .goal__content{
@@ -53,16 +52,16 @@
 }
 
 .goal__pic {
-  background-image: url("../img/main-city-mobile@1x.jpg");
+  background-image: url("../../img/main-city-mobile@1x.jpg");
   background-position: top left;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 260px;
+  min-height: 260px; //высота картинки на мобиле
   width: 100%;
 }
 
 .goal:nth-child(3) .goal__pic {
-  background-image: url("../img/main-bridge-mobile@1x.jpg");
+  background-image: url("../../img/main-bridge-mobile@1x.jpg");
 }
 
 @media (min-width: 768px) {
@@ -78,7 +77,7 @@
   .goal__content {
     flex-basis: 33%;
     flex-grow: 1;
-    padding-top: 45px;
+    padding: 45px 0 44px;
   }
 
   .goal__description {
@@ -89,11 +88,12 @@
   .goal__pic {
     flex-basis: 66%;
     flex-grow: 2;
-    background-image: url("../img/main-city-tablet@1x.jpg");
+    background-image: url("../../img/main-city-tablet@1x.jpg");
+    min-height: auto; //здесь и далее высота картинки нам не нужна
   }
 
   .goal:nth-child(3) .goal__pic {
-    background-image: url("../img/main-bridge-tablet@1x.jpg");
+    background-image: url("../../img/main-bridge-tablet@1x.jpg");
     order: -1;
   }
 
@@ -146,11 +146,11 @@
   }
 
   .goal__pic {
-    background-image: url("../img/main-city-desktop@1x.jpg");
+    background-image: url("../../img/main-city-desktop@1x.jpg");
   }
 
   .goal:nth-child(3) .goal__pic {
-    background-image: url("../img/main-bridge-desktop@1x.jpg");
+    background-image: url("../../img/main-bridge-desktop@1x.jpg");
   }
 
   .goal_gray-style {
