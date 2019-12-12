@@ -1,10 +1,12 @@
 .footer {
   @include usual-text;
   @include usual-text-sizing;
+  padding-top: 33px;
+  padding-bottom: 23px;
 }
 
 .footer__slogan {
-  margin: 32px 0;
+  margin-bottom: 33px;
   font-size: 21px;
   font-weight: 700;
   text-align: center;
@@ -13,6 +15,7 @@
 .footer__social {
   display: flex;
   justify-content: center;
+  margin-bottom: 38px;
 }
 
 .footer__social-item {
@@ -26,7 +29,6 @@
 }
 
 .footer__trademark {
-  padding: 36px 0 23px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,25 +44,39 @@
 @media (min-width: 768px) {
   .footer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    margin: 14px 61px 0;
+    padding-top: 36px;
+    padding-bottom: 33px;
+  }
+
+  .footer__slogan,
+  .footer__social,
+  .footer__trademark {
+    margin-bottom: 0;
   }
 
   .footer__social {
-    flex-basis: 30%;
+    flex-basis: auto;
   }
 
-  .footer__trademark {
+  .footer__social-item {
+    flex-basis: auto;
+    width: 47px;
     margin: 0;
-    padding-top: 27px; //для пиксельперфекта
+    margin-right: 5px;
   }
+
+  .footer__social-item:last-child {
+    margin-right: 0;
+  }
+
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .footer {
-    justify-content: space-around;
-    margin: 11px 0 0;
+    padding-top: 36px;
+    padding-bottom: 33px;
   }
 
   .footer__social {

@@ -8,9 +8,9 @@
   margin: 17px 41px 30px 0;
 }
 
-.advantages-list__item{
+.advantages-list__item {
   margin: 0;
-  background-image: url(../../img/icon-house.svg);
+  background-image: url("../../img/icon-house.svg");
   background-repeat: no-repeat;
   background-position: 22px 9px;
   background-size: 37px 36px;
@@ -19,15 +19,15 @@
 }
 
 .advantages-list__item:nth-child(2) {
-  background-image: url(../../img/icon-gift.svg);
+  background-image: url("../../img/icon-gift.svg");
 }
 
 .advantages-list__item:nth-child(3) {
-  background-image: url(../../img/icon-burger.svg);
+  background-image: url("../../img/icon-burger.svg");
   background-position: 20px 14px;
 }
 
-.advantages-list__offer{
+.advantages-list__offer {
   margin-top: 18px;
   font-size: 18px;
   font-weight: bold;
@@ -43,22 +43,26 @@
     justify-content: space-between;
     text-align: center;
     margin: 0;
+    padding-bottom: 61px; //padding-top в элементах, потому, что иконки фоном...
   }
 
   .advantages-list__item {
     background-position: 83px 58px;
     background-size: 90px 75px;
-    padding: 145px 45px 36px;
+    padding: 140px 45px 0; //paddingи обнуляем после прошлых замечательных манипуляций с фонами...
+    flex-basis: 30%;
   }
 
   .advantages-list__item:nth-child(2) {
-    background-position: 69px 56px;
+    background-position: 80px 56px;
     order: 1;
+    flex-basis: 30%;
   }
 
   .advantages-list__item:nth-child(3) {
-    background-size: 85px 70px;
+    background-size: 90px 70px;
     background-position: 79px 60px;
+    flex-grow: 1;
   }
 
   .advantages-list__offer {

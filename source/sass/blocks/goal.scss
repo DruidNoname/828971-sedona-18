@@ -8,7 +8,7 @@
 }
 
 .goal:nth-child(2) .goal__content {
-  padding-top: 72px; //здесь паддинг больше из-за белой стрелки вверху
+  padding-top: 70px; //здесь паддинг больше из-за белой стрелки вверху
 }
 
 .goal_gray-style {
@@ -81,8 +81,12 @@
     padding: 45px 0 44px;
   }
 
+  .goal__number {
+    margin-bottom: 23px;
+  }
+
   .goal__description {
-    padding: 23px 45px 0; //для правильного выравнивания по строкам
+    padding: 0 47px; //для правильного выравнивания по строкам
   }
 
 
@@ -104,19 +108,20 @@
   }
 
   .goal_gray-style {
-    padding-top: 42px; //пиксельперфект
+    padding-bottom: 17px; //пиксельперфект
 
     .goal__title {
       padding-left: 55px;
       padding-right: 55px;
+      margin-bottom: 10px;
     }
 
     .goal__number {
-      padding-top: 10px;
+      margin-bottom: 20px;
     }
 
     .goal__description {
-      padding: 20px 48px 10px;
+      padding: 0 48px; //для правильного выравнивания по строкам
     }
 
     &::after {
