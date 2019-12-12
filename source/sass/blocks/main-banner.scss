@@ -7,6 +7,10 @@
   padding: 90px 0 83px;
 }
 
+.main-banner_short-version {
+  padding: 49px 0 66px;
+}
+
 .main-banner__slogan {
   display: block;
   width: 281px;
@@ -14,7 +18,7 @@
   margin: 0 auto;
 }
 
-.main-banner_short-version {
+.main-banner_short-version-slogan {
   width: 230px;
   max-width: 100%;
 }
@@ -26,17 +30,16 @@
     background-position: 40% bottom;
     background-size: contain, cover;
     background-repeat: no-repeat;
-    padding: 81px 0 91px;
+    padding: 77px 0 91px;
+  }
+
+  .main-banner_short-version {
+    padding: 94px 0 116px;
   }
 
   .main-banner__slogan {
     width: 460px;
   }
-
-  .main-banner_short-version {
-    padding: 100px 0 115px;
-  }
-
 }
 
 @media (min-width: 1200px) {
@@ -48,6 +51,6 @@
   }
 
   .main-banner_short-version {
-    padding: 55px 0;
+    padding: 102px 0 119px;
   }
 }

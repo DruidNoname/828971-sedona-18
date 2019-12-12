@@ -2,7 +2,7 @@
   @include usual-text;
   @include usual-text-sizing;
   padding-top: 33px;
-  padding-bottom: 23px;
+  padding-bottom: 20px;
 }
 
 .footer__slogan {
@@ -70,7 +70,6 @@
   .footer__social-item:last-child {
     margin-right: 0;
   }
-
 }
 
 @media (min-width: 1200px) {

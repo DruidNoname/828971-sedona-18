@@ -22,8 +22,8 @@
 }
 
 .about-page_secondary-pages {
-  margin: 40px 0 25px;
-
+  line-height: 24px;
+  padding-bottom: 16px;//из-за отсутствия треугольника снизу тут всё по-другому!!!
   &::after {
     display: none;
   }
@@ -53,14 +53,15 @@
   }
 
   .about-page_secondary-pages {
-    margin: 74px auto 68px; //пп
+    padding: 75px 0 69px; //пп
 
     .about-page__what-is {
       font-size: 30px;
+      margin-bottom: 32px;
     }
 
     .about-page__description {
-      margin-top: 28px;
+      padding: 0 32px; //для выравнивания строчек
     }
   }
 
@@ -74,8 +75,8 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .about-page_secondary-pages {
-    margin: 110px auto 70px; //пп
+    padding: 112px 0 71px; //пп
   }
 }

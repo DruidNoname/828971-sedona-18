@@ -189,6 +189,7 @@
 @media (min-width: 1200px) {
   .interview {
     margin: 0 120px;
+    padding-bottom: 81px; //паддинг-костыль, выравнивает высоту формы для задания 5.1
   }
 
   .interview__contacts-wrapper {
@@ -204,7 +205,7 @@
 
   .interview__form-block:first-child,
   .interview__form-block:nth-last-child(4) {
-    flex-basis: 49%;
+    flex-basis: 45%;
 
     .interview__title {
       margin: 25px 0; //это марджин для заголовка без гор. линеечки

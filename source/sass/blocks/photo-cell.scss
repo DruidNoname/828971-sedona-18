@@ -2,8 +2,7 @@
   font-family: "PTSans", "Helvetica", "Arial", sans-serif;
   font-size: 14px;
   line-height: 24px;
-  padding: 20px;
-  padding-bottom: 16px;
+  padding: 22px 0 16px;
   border-top: 1px solid rgba($simply-gray, 0.1);
 }
 
@@ -13,7 +12,16 @@
 
 .photo-cell__pic {
   display: block;
-  margin: 2px auto 8px; //чтобы пиксели совпали с макетом
+  padding: 0 20px;
+  margin-bottom: 15px; //чтобы пиксели совпали с макетом
+}
+
+.photo-cell__pic-info {
+  padding: 0 20px;
+}
+
+.photo-cell__about-pic {
+  margin-bottom: 5px;
 }
 
 .photo-cell__title {
@@ -23,7 +31,6 @@
 
 .photo-cell__likes {
   font-weight: 700;
-  margin-top: 5px;
 
   &::before {
     display: inline-block;
@@ -46,21 +53,31 @@
     flex-basis: 100%;
   }
 
-  .photo-cell__pic-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #eaeaea;
-    padding: 15px 20px;
-  }
-
   .photo-cell__pic {
     margin: 0;
+    padding: 0; //обнуляется
     width: 100%;
+  }
+
+  .photo-cell__pic-info {
+    display: flex;
+    align-items: center;
+    background: #eaeaea;
+    padding: 15px 20px 12px;
+  }
+
+  .photo-cell__about-pic {
+    flex-grow: 1;
   }
 
   .photo-cell__likes {
     margin-top: 0;
+    display: flex;
+    flex-basis: 68px;
+
+    &::before {
+      display: block;
+    }
   }
 }
 
