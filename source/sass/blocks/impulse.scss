@@ -51,7 +51,7 @@
 
 @media (min-width: 758px) {
   .impulse__wrapper {
-    padding: 55px 0 58px;
+    padding: 56px 0 58px;
   }
 
   .impulse_secondary-page .impulse__wrapper {
@@ -80,15 +80,14 @@
 
 @media (min-width: 1200px) {
   .impulse__wrapper {
-    padding-top: 45px;
+    padding-bottom: 67px; //ПП
+  }
+
+  .impulse__action {
+    margin-bottom: 47px;
   }
 
   .impulse_secondary-page .impulse__wrapper {
     padding: 60px 400px 68px; //опять пп
-  }
-
-  .impulse__button {
-    margin-top: 50px;
-    margin-bottom: 63px;
   }
 }
