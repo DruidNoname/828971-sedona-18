@@ -25,6 +25,7 @@
   margin: 0 auto; //из-за отсутствия треугольника снизу тут всё по-другому!!! Марджин обнуляется, отступ прописывается паддингом
   line-height: 24px;
   padding-bottom: 25px;
+
   &::after {
     display: none;
   }
@@ -64,6 +65,10 @@
     .about-page__description {
       padding: 0 22px; //для выравнивания строчек
     }
+  }
+
+  .interview_eracer {
+    display: none;
   }
 
   .about-page__what-is {

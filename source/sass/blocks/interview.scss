@@ -89,10 +89,11 @@
   display: flex;
   align-items: center;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: bold;
   margin-bottom: 15px;
-  &:before { //новые радиокнопки
-    content: '';
+
+  &::before { //модные радиокнопки
+    content: "";
     width: 55px;
     height: 55px;
     border-radius: 28px;
@@ -100,8 +101,8 @@
     margin-right: 25px; //отодвигаем текст от чекбокса
   }
 
-  &:after { //точка внутри радио
-    content: '';
+  &::after { //точка внутри радио
+    content: "";
     position: absolute;
     top: 16px;
     left: 17px;
@@ -124,7 +125,7 @@
   margin: 10px 0 0 7px;
 }
 
-.interview__switcher:checked + .interview__switcher-label:after { //чекбокс выделен
+.interview__switcher:checked + .interview__switcher-label::after { //чекбокс выделен
   opacity: 1;
 }
 
@@ -134,13 +135,15 @@
 
   .interview__switcher-label {
     margin-bottom: 25px; //всё, чем отличаются лейблы чекбоксов от лейблов радио
-    &:before { //всё, чем отличаются чекбоксы от радио
+    &::before { //всё, чем отличаются чекбоксы от радио
       border-radius: 7px;
     }
 
-    &:after { //всё, чем отличаются чекнутые чекбоксы от радио
+    &::after { //всё, чем отличаются чекнутые чекбоксы от радио
       background-color: transparent;
-      background: url("../../img/icon-tick.svg") center no-repeat;
+      background-image: url("../../img/icon-tick.svg");
+      background-position: center;
+      background-repeat: no-repeat;
       top: 15px;
     }
   }
@@ -158,6 +161,7 @@
 
 .interview__button {
   padding: 25px 0 38px;
+
   .button {
     width: 280px;
     border: none;
@@ -169,6 +173,7 @@
 @media (min-width: 768px) {
   .interview {
     margin: 0 60px;
+    padding-bottom: 60px;
   }
 
   .interview__form {
@@ -256,12 +261,15 @@
   }
 
   .interview__input_separate:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
-  .interview__switcher-label,
-  .interview__input_textarea {
+  .interview__switcher-label {
     font-size: 18px;
+  }
+
+  .interview__form-block:nth-child(4) .interview__title_decorate {
+    margin-bottom: 42px;
   }
 
   .interview__list {
@@ -269,8 +277,19 @@
     margin: 0 auto;
 
     .interview__switcher-label {
-      flex-basis: 48%;
+      flex-basis: 35%;
+      margin-bottom: 32px;
+      margin-left: 32px;
     }
+
+    .interview__switcher-label:last-child,
+    .interview__switcher-label:nth-last-of-type(2) {
+      margin-bottom: 5px; //здесь я не обнуляю марджин, как обычно, а прибавляю его к паддингу контейнера, чтобы не ломать логику паддингов контейнера
+    }
+  }
+
+  .interview__input_textarea {
+    margin: 30px 0 9px; //здесь опять отступ от элемента потому, что к нему легче обратиться, чем к однотипному заголовку или однотипному контейнеру
   }
 
   .interview__button { //контейнер для кнопки со сноской-псевдоэлементом
@@ -278,7 +297,6 @@
     justify-content: space-between;
     align-items: center;
     align-self: flex-start;
-    margin: 58px 0;
     width: 100%;
 
     &::after { //тоже флекс-элемент
@@ -286,6 +304,7 @@
       text-align: right;
       text-transform: uppercase;
       color: #000000;
+      font-family: "PTSans", "Helvetica", "Arial", sans-serif;
       font-size: 14px;
       content: "* - обязательные поля";
       width: 300px;
@@ -303,13 +322,7 @@
 @media (min-width: 1200px) {
   .interview {
     margin: 0 120px;
-    padding-bottom: 81px; //паддинг-костыль, выравнивает высоту формы для задания 5.1
-  }
-
-  .interview__contacts-wrapper {
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
+    padding-bottom: 66px;
   }
 
   .interview__input_separate { //я забыла, зачем вводила этот класс >_<
@@ -319,25 +332,77 @@
 
   .interview__form-block:first-child,
   .interview__form-block:nth-last-child(4) {
-    flex-basis: 45%;
+    padding-top: 0;
+    flex-basis: 42%;
 
     .interview__title {
-      margin: 25px 0; //это марджин для заголовка без гор. линеечки
+      margin-bottom: 57px;
     }
   }
 
-  .interview__title_decorate::before,
-  .interview__title_decorate::after {
-    width: 300px;
+  .interview__form-block:first-child {
+    max-width: 400px;
+    padding-left: 79px;
+  }
+
+  .interview__form-block:nth-last-child(4) {
+    margin-top: 0;
+
+    .interview__title {
+      padding-left: 77px; //алайн-селф центр не сработал как надо, потому, что в этом блоке сплошные глюки
+    }
+  }
+
+
+  .interview__title_decorate {
+    margin-bottom: 73px;
+
+    &::before,
+    &::after {
+      width: 300px;
+    }
+  }
+
+  .interview__contacts-wrapper {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    .interview__label_accented,
+    .interview__input {
+      margin: 0;
+    }
+
+    .interview__label_accented {
+      margin-right: 20px;
+    }
+
+    .interview__input {
+      max-width: 290px;
+
+      &:first-child {
+        margin-right: 79px;
+      }
+    }
   }
 
   .interview__list {
     flex-wrap: nowrap;
     justify-content: space-between;
-    margin: 25px 0; //это марджин для заголовка с гор. линеечкой, применённый к контейнеру, чтобы линеечка осталась в центре букв
+    margin: 0;
 
     .interview__switcher-label {
       flex-basis: auto;
+      margin: 0;
     }
+  }
+
+  .interview__input_textarea {
+    margin: 0;
+    margin-top: -20px; //опять выравнивание за счёт этого блока как легкодоступного
+  }
+
+  .interview__button {
+    padding: 9px 0 0;
   }
 }
