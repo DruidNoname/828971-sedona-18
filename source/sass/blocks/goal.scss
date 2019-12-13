@@ -149,10 +149,12 @@
 
   .goal__pic {
     background-image: url("../../img/main-city-desktop@1x.jpg");
+    background-position: center left;
   }
 
   .goal:nth-child(3) .goal__pic {
     background-image: url("../../img/main-bridge-desktop@1x.jpg");
+    background-position: 0 53%;
   }
 
   .goal_gray-style .goal__description {
