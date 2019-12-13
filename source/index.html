@@ -14,7 +14,13 @@
       <li class="main-nav__item"><a href="photo.html">Фото и видео</a></li>
       <li class="main-nav__item"><a href="form.html">Форма отзыва</a></li>
       <li class="main-nav__item"><a href="https://htmlacademy.ru/">HTML Academy</a></li>
-      <li><a class="main-nav__logo"><img src="img/logo-sedona-mobile.svg" alt="" class="main-nav__logo-image"></a></li>
+      <li><a class="main-nav__logo">
+        <picture class="main-nav__logo-image">
+          <source srcset="img/logo-sedona-desktop.svg" media="(min-width: 1200px)">
+          <img src="img/logo-sedona-mobile.svg" alt="">
+        </picture>
+      </a>
+      </li>
     </ul>
   </nav>
   <div class="page-header__bar">
@@ -23,40 +29,41 @@
 </header>
 <main>
   <section class="intro">
-    <div class="main-banner"> <!--    Этот блок можно использовать на других страницах, если убрать все кроме h1-->
+    <div class="main-banner"> <!--    Этот блок общий для всех страниц-->
       <img src="img/text-sedona-index.svg" class="main-banner__slogan">
     </div>
     <div class="about-page">
-      <p class="about-page__what-is">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
-      <p class="about-page__description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+      <div class="about-page__what-is">Седона &mdash; небольшой городок в Аризоне, заслуживающий большего!</div>
+      <div class="about-page__description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</div>
     </div>
   </section>
   <section class="goal">
     <div class="goal__content"> <!--    Этот блок используется на всём макете пять раз-->
       <div class="goal__title">Настоящий городок</div>
-      <div class="goal__number">-№1-</div>
-      <div class="goal__description">Седона - не аттракцион для туристов, там течет своя жизнь!</div>
+      <div class="goal__number">&mdash;&#8470; 1&mdash;</div>
+      <div class="goal__description">Седона не аттракцион для туристов, там течет своя жизнь!</div>
     </div>
     <div class="goal__pic"></div>
     <ul class="advantages-list">
       <li class="advantages-list__item">
-        <p class="advantages-list__offer">Жилье</p>
-        <p class="advantages-list__description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+
+        <div class="advantages-list__offer">Жилье</div>
+        <div class="advantages-list__description">Рекомендуем пожить в настоящем мотеле, всё как в кино!</div>
       </li>
       <li class="advantages-list__item">
-        <p class="advantages-list__offer">Сувениры</p>
-        <p class="advantages-list__description">Не только китайского, но и местного производства!</p>
+        <div class="advantages-list__offer">Сувениры</div>
+        <div class="advantages-list__description">Не только китайского, но и местного производства!</div>
       </li>
       <li class="advantages-list__item">
-        <p class="advantages-list__offer">Еда</p>
-        <p class="advantages-list__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+        <div class="advantages-list__offer">Еда</div>
+        <div class="advantages-list__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</div>
       </li>
     </ul>
   </section>
-  <section class="goal"> <!--    Все секшны одинаковые - почему бы не назначить им один и тот же класс?-->
+  <section class="goal">
     <div class="goal__content">
       <div class="goal__title">Там есть мост дьявола</div>
-      <div class="goal__number">-№2-</div>
+      <div class="goal__number">&mdash;&#8470; 2&mdash;</div>
       <div class="goal__description">Да, по нему можно пройти! Если вы осмелитесь, конечно</div>
     </div>
     <div class="goal__pic"></div>
@@ -64,17 +71,17 @@
   <section class="goal">
     <div class="goal__content goal_gray-style">
       <div class="goal__title">Небольшая площадь</div>
-      <div class="goal__number">-№3-</div>
+      <div class="goal__number">&mdash;&#8470; 3&mdash;</div>
       <div class="goal__description">Все интересные места находятся очень близко</div>
     </div>
     <div class="goal__content goal_gray-style">
       <div class="goal__title">Красивая дорога</div>
-      <div class="goal__number">-№4-</div>
-      <div class="goal__description">Ехать в Седону из Лас-Вегаса - совсем не скучно!</div>
+      <div class="goal__number">&mdash;&#8470; 4&mdash;</div>
+      <div class="goal__description">Ехать в Седону из Лас&#8209;Вегаса совсем не скучно!</div>
     </div>
     <div class="goal__content goal_gray-style">
       <div class="goal__title">Мало туристов</div>
-      <div class="goal__number">-№5-</div>
+      <div class="goal__number">&mdash;&#8470; 5&mdash;</div>
       <div class="goal__description">Большинство едет в Гранд Каньон и толпится там</div>
     </div>
   </section>
@@ -83,17 +90,20 @@
   <section class="impulse">
     <div class="impulse__wrapper">
       <div class="impulse__question">Заинтересовались?</div>
-      <div class="impulse__action">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам лучшие предложения гостиниц в&nbsp;Седоне
+      <div class="impulse__action">Укажите предполагаемые даты поездки, <br class="impulse_content-corrector"> и мы покажем вам лучшие предложения гостиниц в Седоне
       </div>
       <div class="button impulse__button">Найти гостиницу</div>
     </div>
-    <img class="impulse__map" src="img/bg-map-mobile@1x.jpg" alt="">
-    <!--      <iframe src="" frameborder="0" style="border:0;" allowfullscreen=""></iframe> &lt;!&ndash;Здесь будут гугл карты&ndash;&gt;-->
+    <picture class="impulse__map">
+      <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg">
+      <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg">
+      <img class="impulse__map" src="img/bg-map-mobile@1x.jpg" alt="">
+    </picture>
   </section>
 
 </main>
 <footer class="footer">
-  <p class="footer__slogan">#Visitsedona</p>
+  <div class="footer__slogan">#Visitsedona</div>
   <div class="footer__social">
     <div class="footer__social-item footer__twitter"><img src="img/icon-twitter.svg" alt=""></div>
     <div class="footer__social-item footer__facebook"><img src="img/icon-facebook.svg" alt=""></div>

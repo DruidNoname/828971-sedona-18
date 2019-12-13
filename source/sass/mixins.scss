@@ -8,3 +8,13 @@
   padding-left: 0; //чтобы нивелировать отступ для списка
   margin: 0; //чтобы убрать верхние-нижние марджины списка
 }
+
+@mixin usual-text {
+  font-family: "PTSans", "Helvetica", "Arial", sans-serif;
+  text-transform: uppercase;
+}
+
+@mixin usual-text-sizing {
+  font-size: 14px;
+  line-height: 1.5;
+}

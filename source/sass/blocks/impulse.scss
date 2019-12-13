@@ -1,0 +1,98 @@
+.impulse {
+  @include usual-text;
+  @include usual-text-sizing;
+  text-align: center;
+}
+
+.impulse__wrapper {
+  margin: 0 auto;
+  padding: 28px 0 49px;
+}
+
+.impulse__question {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 26px;
+  margin-bottom: 18px;
+}
+
+.impulse__action {
+  line-height: 24px;
+  padding: 0 28px;
+  margin-bottom: 36px;
+}
+
+.impulse_secondary-page { //это потому, что на вспомогательной странице шрифт меньше, чем на главной (да здесь всё, блин, не так!)
+
+  .impulse__wrapper {
+    padding: 32px 0 35px;
+  }
+
+  .impulse__question {
+    font-size: 18px;
+    margin-bottom: 27px;
+  }
+
+  .impulse__action {
+    padding: 0 33px;
+    margin-bottom: 0; //обнуляем. В предыдущем блоке это был не последний элемент, и он требовал нижнего марджина, тут - последний.
+  }
+}
+
+.impulse__button {
+  margin: 0 auto;
+  width: 280px;
+}
+
+.impulse__map {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.impulse_content-corrector {
+  display: none; //это костыль. Я так и не придумала, как сделать лучше
+}
+
+@media (min-width: 758px) {
+  .impulse__wrapper {
+    padding: 56px 0 58px;
+  }
+
+  .impulse_secondary-page .impulse__wrapper {
+    padding: 65px 135px 74px; //опять пп
+  }
+
+  .impulse_secondary-page .impulse__question,
+  .impulse__question {
+    font-size: 30px;
+    line-height: 26px;
+    margin-bottom: 30px;
+  }
+
+  .impulse__action {
+    margin-bottom: 43px;
+  }
+
+  .impulse__button {
+    width: 458px;
+  }
+
+  .impulse_content-corrector {
+    display: block; //это костыль. Я так и не придумала, как сделать лучше
+  }
+}
+
+@media (min-width: 1200px) {
+  .impulse__wrapper {
+    padding-bottom: 67px; //ПП
+  }
+
+  .impulse__action {
+    margin-bottom: 47px;
+  }
+
+  .impulse_secondary-page .impulse__wrapper {
+    padding: 71px 356px 71px; //опять пп
+  }
+}

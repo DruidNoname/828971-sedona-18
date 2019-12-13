@@ -1,0 +1,85 @@
+.footer {
+  @include usual-text;
+  @include usual-text-sizing;
+  padding-top: 33px;
+  padding-bottom: 20px;
+}
+
+.footer__slogan {
+  margin-bottom: 33px;
+  font-size: 21px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.footer__social {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 38px;
+}
+
+.footer__social-item {
+  display: flex;
+  justify-content: center;
+  flex-basis: 47px;
+  height: 48px;
+  background: $simply-blue;
+  color: #ffffff;
+  margin: 0 3px;
+}
+
+.footer__trademark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__logo-academy {
+  width: 40px;
+  height: auto;
+  margin-right: -9px;
+  padding-left: 6px;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 36px;
+    padding-bottom: 33px;
+  }
+
+  .footer__slogan,
+  .footer__social,
+  .footer__trademark {
+    margin-bottom: 0;
+  }
+
+  .footer__social {
+    flex-basis: auto;
+  }
+
+  .footer__social-item {
+    flex-basis: auto;
+    width: 47px;
+    margin: 0;
+    margin-right: 5px;
+  }
+
+  .footer__social-item:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer {
+    padding-top: 36px;
+    padding-bottom: 33px;
+  }
+
+  .footer__social {
+    flex-basis: 17%;
+    margin: 0 4px;
+  }
+}

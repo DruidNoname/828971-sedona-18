@@ -1,5 +1,8 @@
 .photo-cell {
-  padding: 20px;
+  font-family: "PTSans", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 22px 0 16px;
   border-top: 1px solid rgba($simply-gray, 0.1);
 }
 
@@ -8,7 +11,17 @@
 }
 
 .photo-cell__pic {
-  margin: 2px auto; //чтобы пиксели совпали с макетом
+  display: block;
+  padding: 0 20px;
+  margin-bottom: 15px; //чтобы пиксели совпали с макетом
+}
+
+.photo-cell__pic-info {
+  padding: 0 20px;
+}
+
+.photo-cell__about-pic {
+  margin-bottom: 5px;
 }
 
 .photo-cell__title {
@@ -18,7 +31,6 @@
 
 .photo-cell__likes {
   font-weight: 700;
-  margin: 19px 0 23px;
 
   &::before {
     display: inline-block;
@@ -26,7 +38,7 @@
     width: 23px;
     height: 21px;
     margin-right: 14px;
-    background: url("../img/icon-like.svg") 0 0/ cover no-repeat;
+    background: url("../../img/icon-like.svg") 0 0/ cover no-repeat;
   }
 }
 
@@ -43,21 +55,29 @@
 
   .photo-cell__pic {
     margin: 0;
+    padding: 0; //обнуляется
     width: 100%;
-  }
-
-  .photo-cell__about-pic {
-    padding-left: 20px;
-  }
-
-  .photo-cell__likes {
-    padding-right: 20px;
   }
 
   .photo-cell__pic-info {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     background: #eaeaea;
+    padding: 15px 20px 12px;
+  }
+
+  .photo-cell__about-pic {
+    flex-grow: 1;
+  }
+
+  .photo-cell__likes {
+    margin-top: 0;
+    display: flex;
+    flex-basis: 68px;
+
+    &::before {
+      display: block;
+    }
   }
 }
 

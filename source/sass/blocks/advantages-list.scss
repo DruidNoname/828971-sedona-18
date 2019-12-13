@@ -1,0 +1,106 @@
+.advantages-list {
+  @include no-list;
+  @include usual-text;
+  @include usual-text-sizing;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 17px 41px 30px 0;
+}
+
+.advantages-list__item {
+  margin: 0;
+  background-image: url("../../img/icon-house.svg");
+  background-repeat: no-repeat;
+  background-position: 22px 9px;
+  background-size: 37px 36px;
+  padding-left: 70px;
+  padding-bottom: 7px;
+}
+
+.advantages-list__item:nth-child(2) {
+  background-image: url("../../img/icon-gift.svg");
+}
+
+.advantages-list__item:nth-child(3) {
+  background-image: url("../../img/icon-burger.svg");
+  background-position: 20px 14px;
+}
+
+.advantages-list__offer {
+  margin-top: 18px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.44;
+  color: #000000;
+  margin-bottom: 17px;
+}
+
+@media (min-width: 768px) {
+  .advantages-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 61px; //padding-top в элементах, потому, что иконки фоном...
+  }
+
+  .advantages-list__item {
+    background-position: 83px 58px;
+    background-size: 90px 75px;
+    padding: 140px 45px 0; //paddingи обнуляем после прошлых замечательных манипуляций с фонами...
+    flex-basis: 30%;
+  }
+
+  .advantages-list__item:nth-child(2) {
+    background-position: 80px 56px;
+    order: 1;
+    flex-basis: 30%;
+  }
+
+  .advantages-list__item:nth-child(3) {
+    background-size: 90px 70px;
+    background-position: 79px 60px;
+    flex-grow: 1;
+  }
+
+  .advantages-list__offer {
+    font-size: 21px;
+    line-height: 26px;
+    margin-bottom: 21px;
+  }
+
+  .advantages-list__description {
+    text-align: center;
+    padding-left: 0;
+    padding-top: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .advantages-list {
+    padding-bottom: 83px;
+  }
+
+  .advantages-list__item {
+    padding-left: 55px;
+    padding-right: 55px;
+    background-position: 153px 58px;
+    background-size: 90px 75px;
+  }
+
+  .advantages-list__item:nth-child(2) {
+    background-position: 152px 56px;
+  }
+
+  .advantages-list__item:nth-child(3) {
+    background-size: 93px 70px;
+    background-position: 151px 60px;
+  }
+
+  .goal__description {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}

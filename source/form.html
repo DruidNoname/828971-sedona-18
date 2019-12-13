@@ -14,7 +14,13 @@
             <li class="main-nav__item"><a href="photo.html">Фото и видео</a></li>
             <li class="main-nav__item"><a>Форма отзыва</a></li>
             <li class="main-nav__item"><a href="https://htmlacademy.ru/">HTML Academy</a></li>
-            <li><a href="" class="main-nav__logo"><img src="img/logo-sedona-mobile.svg" alt="" class="main-nav__logo-image"></a></li>
+            <li><a class="main-nav__logo">
+                <picture class="main-nav__logo-image">
+                    <source srcset="img/logo-sedona-desktop.svg" media="(min-width: 1200px)">
+                    <img src="img/logo-sedona-mobile.svg" alt="">
+                </picture>
+            </a>
+            </li>
         </ul>
     </nav>
     <div class="page-header__bar">
@@ -23,75 +29,71 @@
     </div>
 </header>
 <main>
-    <main>
-        <section class="intro">
-            <div class="main-banner">
-                <img src="img/text-sedona.svg" class="main-banner__slogan" alt="">
-            </div>
-            <div class="about-page">
-                <p class="about-page__what-is">Оставьте свой отзыв</p>
-                <p class="about-page__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещённых вами достопримечательностях</p>
-            </div>
-        </section>
-        <section class="interview">
-            <form action="https://echo.htmlacademy.ru" class="interview__form">
-
-                <div class="interview__form-block">
-                    <h2  class="interview__title">Представьтесь:</h2>
-                    <div class="interview__aligner"><label for="firstname" class="interview__label_accented">Имя<sup>*</sup>:</label><input class="interview__input" id="firstname" type="text" required></div>
-                    <div class="interview__aligner"><label for="lastname" class="interview__label_accented">Фамилия<sup>*</sup>:</label><input class="interview__input" id="lastname" type="text" required></div>
-                    <div class="interview__aligner"><label for="patronym" class="interview__label_accented">Отчество:</label><input class="interview__input" id="patronym" type="text"></div>
-                </div>
-
-                <div class="interview__form-block">
-                    <div class="interview__title_decorate"><h2 class="interview__title">Контактная информация</h2></div>
-                    <div class="interview__contacts-wrapper">
-                        <label for="phone-number" class="interview__label interview__label_accented">Контактный
-                        телефон<sup>*</sup>:</label>
-                        <input id="phone-number" type="tel" class="interview__input interview__input_separate" placeholder="Введите телефон">
-                        <label for="e-mail" class="interview__label interview__label_accented">Электронная
-                            почта<sup>*</sup>:</label>
-                        <input id="e-mail" type="email" class="interview__input interview__input_separate" placeholder="Введите e-mail">
-                    </div>
-                </div>
-
-                <div class="interview__form-block">
-                    <h2 class="interview__title">Ваше общее впечатление</h2>
-                    <label for="positive" class="interview__switcher-label"><input type="radio" id="positive" name="traveler-mark" class="interview__switcher" checked>Скорее положительное</label>
-                    <label for="negative" class="interview__switcher-label"><input type="radio" id="negative" name="traveler-mark"  class="interview__switcher">Скорее отрицательное</label>
-                    <label for="confused" class="interview__switcher-label"><input type="radio" id="confused" name="traveler-mark" class="interview__switcher">Затрудняюсь ответить</label>
-                </div>
-
-                <div class="interview__form-block">
-                    <div class="interview__title_decorate"><h2 class="interview__title">Посещённые достопримечательности</h2></div>
-                    <div class="interview__list">
-                        <label for="bridge" class="interview__switcher-label"><input type="checkbox" id="bridge"
-                                                                                    name="bridge"
-                                                                                    class="interview__switcher" checked>Мост
-                        Дьявола</label>
-                        <label for="hill" class="interview__switcher-label"><input type="checkbox" id="hill" name="hill" class="interview__switcher" checked>Гора-Колокол</label>
-                        <label for="park" class="interview__switcher-label"><input type="checkbox" id="park" name="park" class="interview__switcher" checked>Слайд-парк</label>
-                        <label for="rocks" class="interview__switcher-label"><input type="checkbox" id="rocks" name="rocks" class="interview__switcher">Красные
-                            скалы</label>
-                    </div>
-                </div>
-
-                <div class="interview__form-block">
-                    <div class="interview__title_decorate"><h2 class="interview__title">Опишите свои эмоции</h2></div>
-                    <textarea class="interview__input interview__input_textarea" name="comment" rows="6">Опишите подробно все свои восторги</textarea>
-                </div>
-                <div class="interview__button"><input type="submit" class="button" value="Отправить отзыв"></div>
-            </form>
-        </section>
-    </main>
-    <footer class="footer">
-        <p class="footer__slogan">#Visitsedona</p>
-        <div class="footer__social">
-            <div class="footer__social-item footer__twitter"><img src="img/icon-twitter.svg" alt=""></div>
-            <div class="footer__social-item footer__facebook"><img src="img/icon-facebook.svg" alt=""></div>
-            <div class="footer__social-item footer__youtube"><img src="img/icon-youtube.svg" alt=""></div>
+    <section class="intro">
+        <div class="main-banner main-banner_short-version">
+            <img src="img/text-sedona.svg" class="main-banner__slogan main-banner_short-version-slogan" alt="">
         </div>
-        <div class="footer__trademark">Разработано <img class="footer__logo-academy" src="img/htmlacademy.svg" alt=""></div>
-    </footer>
+        <div class="about-page about-page_secondary-pages">
+            <div class="about-page__what-is">Оставьте свой отзыв</div>
+            <div class="about-page__description">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещённых вами достопримечательностях</div>
+        </div>
+    </section>
+    <section class="interview">
+        <form action="https://echo.htmlacademy.ru" class="interview__form">
+
+            <div class="interview__form-block">
+                <h2  class="interview__title">Представьтесь:</h2>
+                <div class="interview__aligner"><label for="firstname" class="interview__label_accented">Имя<sup>*</sup>:</label><input class="interview__input" id="firstname" type="text" required></div>
+                <div class="interview__aligner"><label for="lastname" class="interview__label_accented">Фамилия<sup>*</sup>:</label><input class="interview__input" id="lastname" type="text" required></div>
+                <div class="interview__aligner"><label for="patronym" class="interview__label_accented">Отчество:</label><input class="interview__input" id="patronym" type="text"></div>
+            </div>
+
+            <div class="interview__form-block">
+                <div class="interview__title_decorate"><h2 class="interview__title">Контактная информация</h2></div>
+                <div class="interview__contacts-wrapper">
+                    <label for="phone-number" class="interview__label interview__label_accented">Контактный
+                        телефон<sup>*</sup>:</label>
+                    <input id="phone-number" type="tel" class="interview__input interview__input_separate" placeholder="Введите телефон">
+                    <label for="e-mail" class="interview__label interview__label_accented">Электронная
+                        почта<sup>*</sup>:</label>
+                    <input id="e-mail" type="email" class="interview__input interview__input_separate" placeholder="Введите e-mail">
+                </div>
+            </div>
+
+            <div class="interview__form-block">
+                <h2 class="interview__title">Ваше общее впечатление</h2>
+                <label for="positive" class="interview__switcher-label"><input type="radio" id="positive" name="traveler-mark" class="interview__switcher" checked>Скорее положительное</label>
+                <label for="negative" class="interview__switcher-label"><input type="radio" id="negative" name="traveler-mark"  class="interview__switcher">Скорее отрицательное</label>
+                <label for="confused" class="interview__switcher-label"><input type="radio" id="confused" name="traveler-mark" class="interview__switcher">Затрудняюсь ответить</label>
+            </div>
+
+            <div class="interview__form-block">
+                <div class="interview__title_decorate"><h2 class="interview__title">Посещённые достопримечательности</h2></div>
+                <div class="interview__list">
+                    <label for="bridge" class="interview__switcher-label"><input type="checkbox" id="bridge" name="bridge" class="interview__switcher" checked>Мост Дьявола</label>
+                    <label for="hill" class="interview__switcher-label"><input type="checkbox" id="hill" name="hill" class="interview__switcher" checked>Гора-Колокол</label>
+                    <label for="park" class="interview__switcher-label"><input type="checkbox" id="park" name="park" class="interview__switcher" checked>Слайд-парк</label>
+                    <label for="rocks" class="interview__switcher-label"><input type="checkbox" id="rocks" name="rocks" class="interview__switcher">Красные
+                        скалы</label>
+                </div>
+            </div>
+
+            <div class="interview__form-block">
+                <div class="interview__title_decorate"><h2 class="interview__title">Опишите свои эмоции</h2></div>
+                <textarea class="interview__input interview__input_textarea" name="comment" rows="6">Опишите подробно все свои восторги</textarea>
+            </div>
+            <div class="interview__button"><input type="submit" class="button" value="Отправить отзыв"></div>
+        </form>
+    </section>
+</main>
+<footer class="footer">
+    <div class="footer__slogan">#Visitsedona</div>
+    <div class="footer__social">
+        <div class="footer__social-item footer__twitter"><img src="img/icon-twitter.svg" alt=""></div>
+        <div class="footer__social-item footer__facebook"><img src="img/icon-facebook.svg" alt=""></div>
+        <div class="footer__social-item footer__youtube"><img src="img/icon-youtube.svg" alt=""></div>
+    </div>
+    <div class="footer__trademark">Разработано <img class="footer__logo-academy" src="img/htmlacademy.svg" alt=""></div>
+</footer>
 </body>
 </html>
