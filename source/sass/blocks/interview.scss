@@ -1,21 +1,31 @@
+.interview__form {
+  margin-top: -10px; //отрицательный марджин нужен здесь для подтягивания формы вверх, чтобы не уродовать вёрстку блока "about-page" для secondary-page
+}
+
 .interview__form-block {
+  font-family: "PTSans", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 26px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   border-top: 1px solid rgba($simply-gray, 0.1);
-  padding: 0 20px;
+  padding: 20px 20px 26px; //отступы по бокам здесь, иначе инпуты за них вылазят
 }
 
 .interview__title {
+  margin: 0;
+  margin-bottom: 18px;
   text-align: center;
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
-  margin: 25px 0;
-  align-self: center;
 }
 
-.interview__label {
+.interview__label,
+.interview__label_accented {
   display: block;
+  line-height: 26px;
 }
 
 .interview__label_accented { //для больших буков в лейбле (они не везде)
@@ -25,21 +35,41 @@
 .interview__aligner { //чтобы поля в имени-отчестве выравнивались на всю ширину без проблем
   display: flex;
   align-items: center;
+  justify-content: space-between; //имя в начале, поле - в конце
   margin-bottom: 20px; //просто чтобы строки не слипались
+  overflow: hidden; //потому, что одно поле выползает за границу
 
   .interview__label_accented {
-    margin-right: 10px; //отступ от лейблов
+    margin-right: 13px; //отступ от лейблов в графе с фио
   }
+}
+
+.interview__aligner:last-child {
+  margin: 0; //обнуление марджина последнего элемента
+}
+
+
+.interview__form-block:nth-child(2) { //во втором элементе нижний отступ меньше
+  padding-bottom: 18px;
 }
 
 .interview__contacts-wrapper { //обёртка для контактной информации, понадобится позже, пока выравнивает
   display: flex;
   flex-wrap: wrap;
+
+  .interview__label_accented {
+    margin-left: 21px; //отступ от лейблов в графе с контактами
+    margin-bottom: 9px;
+  }
+
+  .interview__input_separate {
+    margin-bottom: 9px;
+  }
 }
 
 .interview__label, //просто отступы в мобильной вёрстке
 .interview__input_separate {
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 }
 
 .interview__input {
@@ -47,17 +77,55 @@
   background: rgba($simply-gray, 0.2);
   border: none;
   max-width: 100%;
-  padding: 15px 0;
-  padding-left: 20px;
+  padding: 18px 0 20px; //размер инпута
+  padding-left: 23px;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
 }
 
 .interview__switcher-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  &:before { //новые радиокнопки
+    content: '';
+    width: 55px;
+    height: 55px;
+    border-radius: 28px;
+    background: #f2f2f2;
+    margin-right: 25px; //отодвигаем текст от чекбокса
+  }
+
+  &:after { //точка внутри радио
+    content: '';
+    position: absolute;
+    top: 16px;
+    left: 17px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #000000;
+    opacity: 0;
+  }
 }
 
-.interview__switcher {
-  margin-right: 10px;
+.interview__switcher-label:last-child { //обнуляем последний отступ
+  margin-bottom: 0;
+}
+
+.interview__switcher { //скрываем радиокнопки с глаз долой
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin: 10px 0 0 7px;
+}
+
+.interview__switcher:checked + .interview__switcher-label:after { //чекбокс выделен
+  opacity: 1;
 }
 
 .interview__list {
@@ -65,18 +133,36 @@
   flex-wrap: wrap;
 
   .interview__switcher-label {
-    flex-basis: 100%;
+    margin-bottom: 25px; //всё, чем отличаются лейблы чекбоксов от лейблов радио
+    &:before { //всё, чем отличаются чекбоксы от радио
+      border-radius: 7px;
+    }
+
+    &:after { //всё, чем отличаются чекнутые чекбоксы от радио
+      background-color: transparent;
+      background: url("../../img/icon-tick.svg") center no-repeat;
+      top: 15px;
+    }
+  }
+
+  .interview__switcher-label:last-child { //обнуляем последний отступ
+    margin-bottom: 0;
   }
 }
 
 .interview__input_textarea {
-  padding-right: 20px;
+  font-size: 18px;
+  line-height: 26px;
+  padding: 14px 20px;
 }
 
 .interview__button {
+  padding: 25px 0 38px;
   .button {
-    width: 100%;
+    width: 280px;
     border: none;
+    margin: 0 auto;
+    padding: 16px 0 18px;
   }
 }
 
@@ -92,32 +178,52 @@
     justify-content: space-between;
   }
 
+  .interview__form-block {
+    flex-basis: 100%;
+    border-top: none;
+    justify-content: flex-start;
+    padding: 14px 0 51px;
+  }
+
   .interview__form-block:first-child,
   .interview__form-block:nth-last-child(4) {
-    flex-basis: 49%;
+    flex-basis: 30%;
+
+    .interview__title {
+      text-align: left;
+      margin-bottom: 60px;
+    }
+
+    .interview__switcher-label:not(:last-child) {
+      margin-bottom: 23px;
+    }
+  }
+
+  .interview__form-block:first-child {
+    max-width: 266px; //ограничение, потому-что эта штука НУ НИКАК не вставала, как нужно...
+    padding-left: 58px; //отталкиваем проклятую полосочку на место
   }
 
   .interview__form-block:nth-last-child(4) {
     order: -1;
-    border-right: 1px solid rgba($simply-gray, 0.2);
-  }
-
-  .interview__form-block {
-    flex-basis: 100%;
-    border-top: none;
+    border-right: 1px solid rgba($simply-gray, 0.3);
+    flex-grow: 1;
+    padding: 0;
+    margin: 14px 0 51px; //патамушта полосочка...
   }
 
   .interview__title_decorate {
     position: relative;
     width: 100%;
     text-align: center;
-    margin: 0 0 25px;
+    margin-bottom: 25px;
   }
 
   .interview__title {
     display: inline-block; //чтобы тексты встали норм между горизонтальными линеечками
     font-size: 21px;
     max-width: 300px; //чтобы достопримечательности перенеслись на другую строку
+    margin-bottom: 0;
   }
 
   .interview__title_decorate::before, //собственно горизонтальные линеечки
@@ -140,9 +246,17 @@
     right: 0;
   }
 
+  .interview__form-block:nth-child(2) { //во втором элементе нижний отступ меньше
+    padding-bottom: 36px;
+  }
 
-  .interview__input_separate { //я забыла, зачем вводила этот класс >_<
+  .interview__contacts-wrapper .interview__input_separate { //стилизация полей с телефоном
     flex-basis: 100%;
+    margin-bottom: 21px;
+  }
+
+  .interview__input_separate:last-child {
+    margin-bottom: 0px;
   }
 
   .interview__switcher-label,
