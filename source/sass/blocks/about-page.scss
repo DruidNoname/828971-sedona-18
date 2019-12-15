@@ -22,8 +22,10 @@
 }
 
 .about-page_secondary-pages {
+  margin: 0 auto; //из-за отсутствия треугольника снизу тут всё по-другому!!! Марджин обнуляется, отступ прописывается паддингом
   line-height: 24px;
-  padding-bottom: 16px;//из-за отсутствия треугольника снизу тут всё по-другому!!!
+  padding-bottom: 25px;
+
   &::after {
     display: none;
   }
@@ -61,7 +63,7 @@
     }
 
     .about-page__description {
-      padding: 0 32px; //для выравнивания строчек
+      padding: 0 22px; //для выравнивания строчек
     }
   }
 

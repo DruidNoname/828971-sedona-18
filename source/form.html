@@ -43,44 +43,55 @@
 
             <div class="interview__form-block">
                 <h2  class="interview__title">Представьтесь:</h2>
-                <div class="interview__aligner"><label for="firstname" class="interview__label_accented">Имя<sup>*</sup>:</label><input class="interview__input" id="firstname" type="text" required></div>
-                <div class="interview__aligner"><label for="lastname" class="interview__label_accented">Фамилия<sup>*</sup>:</label><input class="interview__input" id="lastname" type="text" required></div>
-                <div class="interview__aligner"><label for="patronym" class="interview__label_accented">Отчество:</label><input class="interview__input" id="patronym" type="text"></div>
+                <div class="interview__aligner"><label for="firstname" class="interview__label_accented">Имя<sup>*</sup>:</label><input class="interview__input" id="firstname" type="text" placeholder="Петр" required></div>
+                <div class="interview__aligner"><label for="lastname" class="interview__label_accented">Фамилия<sup>*</sup>:</label><input class="interview__input" id="lastname" type="text" placeholder="Иванов" required></div>
+                <div class="interview__aligner"><label for="patronym" class="interview__label_accented">Отчество:</label><input class="interview__input" id="patronym"  placeholder="Александрович" type="text"></div>
             </div>
 
             <div class="interview__form-block">
-                <div class="interview__title_decorate"><h2 class="interview__title">Контактная информация</h2></div>
+                <div class="interview__title_decorate"><h2 class="interview__title">Контактная информация:</h2></div>
                 <div class="interview__contacts-wrapper">
-                    <label for="phone-number" class="interview__label interview__label_accented">Контактный
+                    <label for="phone-number" class="interview__label interview__label_accented"><span class="interview_eracer">Контактный</span>
                         телефон<sup>*</sup>:</label>
                     <input id="phone-number" type="tel" class="interview__input interview__input_separate" placeholder="Введите телефон">
-                    <label for="e-mail" class="interview__label interview__label_accented">Электронная
+                  <svg class="interview__contact-icon" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="18px" height="18px" viewBox="0 0 18 18" enable-background="new 0 0 18 18" xml:space="preserve">
+                    <g id="Page-1">
+                      <g id="Icons-Communication" transform="translate(-85.000000, -126.000000)">
+                      <g id="phone" transform="translate(85.000000, 126.000000)">
+                        <path id="Shape" fill="#010101" d="M3.6,7.8C5,10.6,7.4,12.9,10.2,14.4l2.2-2.2c0.3-0.3,0.699-0.4,1-0.2c1.1,0.4,2.3,0.6,3.6,0.6 c0.6,0,1,0.4,1,1V17c0,0.6-0.4,1-1,1C7.6,18,0,10.4,0,1c0-0.6,0.4-1,1-1h3.5c0.6,0,1,0.4,1,1c0,1.2,0.2,2.4,0.6,3.6 c0.1,0.3,0,0.7-0.2,1L3.6,7.8L3.6,7.8z"/>
+                      </g>
+                      </g>
+                    </g>
+                  </svg>
+                  <label for="e-mail" class="interview__label interview__label_accented">Электронная
                         почта<sup>*</sup>:</label>
-                    <input id="e-mail" type="email" class="interview__input interview__input_separate" placeholder="Введите e-mail">
+                  <input id="e-mail" type="email" class="interview__input interview__input_separate" placeholder="Введите e-mail">
+                  <svg class="interview__contact-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+                    <path d="M8,10c-0.266,0-0.5-0.094-1-0.336L0,6v7c0,0.55,0.45,1,1,1h14c0.55,0,1-0.45,1-1V6L9,9.664C8.5,9.906,8.266,10,8,10z M15,2 H1C0.45,2,0,2.45,0,3v0.758l8,4.205l8-4.205V3C16,2.45,15.55,2,15,2z"/>
+                  </svg>
                 </div>
             </div>
-
             <div class="interview__form-block">
-                <h2 class="interview__title">Ваше общее впечатление</h2>
-                <label for="positive" class="interview__switcher-label"><input type="radio" id="positive" name="traveler-mark" class="interview__switcher" checked>Скорее положительное</label>
-                <label for="negative" class="interview__switcher-label"><input type="radio" id="negative" name="traveler-mark"  class="interview__switcher">Скорее отрицательное</label>
-                <label for="confused" class="interview__switcher-label"><input type="radio" id="confused" name="traveler-mark" class="interview__switcher">Затрудняюсь ответить</label>
+                <h2 class="interview__title">Ваше общее впечатление:</h2>
+                <input type="radio" id="positive" name="traveler-mark" class="interview__switcher" checked><label for="positive" class="interview__switcher-label">Скорее положительное</label>
+                <input type="radio" id="negative" name="traveler-mark"  class="interview__switcher"><label for="negative" class="interview__switcher-label">Скорее отрицательное</label>
+                <input type="radio" id="confused" name="traveler-mark" class="interview__switcher"><label for="confused" class="interview__switcher-label">Затрудняюсь ответить</label>
             </div>
 
             <div class="interview__form-block">
-                <div class="interview__title_decorate"><h2 class="interview__title">Посещённые достопримечательности</h2></div>
+                <div class="interview__title_decorate"><h2 class="interview__title">Посещённые достопримечательности:</h2></div>
                 <div class="interview__list">
-                    <label for="bridge" class="interview__switcher-label"><input type="checkbox" id="bridge" name="bridge" class="interview__switcher" checked>Мост Дьявола</label>
-                    <label for="hill" class="interview__switcher-label"><input type="checkbox" id="hill" name="hill" class="interview__switcher" checked>Гора-Колокол</label>
-                    <label for="park" class="interview__switcher-label"><input type="checkbox" id="park" name="park" class="interview__switcher" checked>Слайд-парк</label>
-                    <label for="rocks" class="interview__switcher-label"><input type="checkbox" id="rocks" name="rocks" class="interview__switcher">Красные
+                    <input type="checkbox" id="bridge" name="bridge" class="interview__switcher" checked><label for="bridge" class="interview__switcher-label">Мост Дьявола</label>
+                    <input type="checkbox" id="hill" name="hill" class="interview__switcher" checked><label for="hill" class="interview__switcher-label">Гора-Колокол</label>
+                    <input type="checkbox" id="park" name="park" class="interview__switcher" checked><label for="park" class="interview__switcher-label">Слайд-парк</label>
+                    <input type="checkbox" id="rocks" name="rocks" class="interview__switcher"><label for="rocks" class="interview__switcher-label">Красные
                         скалы</label>
                 </div>
             </div>
 
             <div class="interview__form-block">
-                <div class="interview__title_decorate"><h2 class="interview__title">Опишите свои эмоции</h2></div>
-                <textarea class="interview__input interview__input_textarea" name="comment" rows="6">Опишите подробно все свои восторги</textarea>
+                <div class="interview__title_decorate"><h2 class="interview__title">Опишите свои эмоции:</h2></div>
+                <textarea class="interview__input interview__input_textarea" name="comment" rows="5">Опишите подробно все свои восторги</textarea>
             </div>
             <div class="interview__button"><input type="submit" class="button" value="Отправить отзыв"></div>
         </form>
