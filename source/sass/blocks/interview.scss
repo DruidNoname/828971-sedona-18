@@ -67,6 +67,13 @@
   }
 }
 
+.interview__contact-icon {
+  width: 20px;
+  height: 20px;
+  background: rgba($simply-gray, 0.3);
+  border: 19px solid transparent;
+}
+
 .interview__label, //просто отступы в мобильной вёрстке
 .interview__input_separate {
   margin-bottom: 23px;
@@ -173,7 +180,7 @@
 @media (min-width: 768px) {
   .interview {
     margin: 0 60px;
-    padding-bottom: 60px;
+    padding-bottom: 23px;
   }
 
   .interview__form {
@@ -251,12 +258,12 @@
     right: 0;
   }
 
-  .interview__form-block:nth-child(2) { //во втором элементе нижний отступ меньше
-    padding-bottom: 36px;
+  .interview__form-block:nth-child(2) {
+    padding-bottom: 15px;
   }
 
   .interview__contacts-wrapper .interview__input_separate { //стилизация полей с телефоном
-    flex-basis: 100%;
+    flex-basis: 85%; //иконка со строкой норм встаёт
     margin-bottom: 21px;
   }
 
@@ -298,6 +305,7 @@
     align-items: center;
     align-self: flex-start;
     width: 100%;
+    padding-top: 0;
 
     &::after { //тоже флекс-элемент
       display: inline-block;
@@ -378,12 +386,17 @@
     }
 
     .interview__input {
-      max-width: 290px;
-
-      &:first-child {
-        margin-right: 79px;
-      }
+      max-width: 232px;
     }
+  }
+
+  .interview_eracer {
+    display: none;
+  }
+
+
+  .interview__contact-icon:first-of-type {
+    margin-right: 79px;
   }
 
   .interview__list {
