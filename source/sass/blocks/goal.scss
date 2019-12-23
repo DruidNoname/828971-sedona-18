@@ -52,26 +52,10 @@
   color: $simply-gray;
 }
 
-//.goal__pic {
-//  background-image: url("../../img/main-city-mobile@1x.jpg");
-//  background-position: top left;
-//  background-size: cover;
-//  background-repeat: no-repeat;
-//  min-height: 260px; //высота картинки на мобиле
-//  width: 100%;
-//
-//  @media (min-resolution: $retina-dppx) {
-//    background-image: url("../../img/main-city-mobile@2x.jpg");
-//  }
-//}
-//
-//.goal:nth-child(3) .goal__pic {
-//  background-image: url("../../img/main-bridge-mobile@1x.jpg");
-//
-//  @media (min-resolution: $retina-dppx) {
-//    background-image: url("../../img/main-bridge-mobile@2x.jpg");
-//  }
-//}
+.goal__pic {
+  display: block;
+}
+
 
 @media (min-width: 768px) {
   .goal {
@@ -86,7 +70,7 @@
   .goal__content {
     flex-basis: 33%;
     flex-grow: 1;
-    //padding: 45px 0 44px;
+    padding: 45px 0 44px;
   }
 
   .goal__number {
@@ -98,24 +82,14 @@
   }
 
 
-  .goal__pic {
+  .goal__pic-container {
     flex-basis: 66%;
     flex-grow: 2;
-    background-image: url("../../img/main-city-tablet@1x.jpg");
-    min-height: auto; //здесь и далее высота картинки нам не нужна
-
-    @media (min-resolution: $retina-dppx) {
-      ackground-image: url("../../img/main-city-tablet@2x.jpg");
-    }
+    overflow: hidden;
   }
 
-  .goal:nth-child(3) .goal__pic {
-    background-image: url("../../img/main-bridge-tablet@1x.jpg");
-    order: -1;
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../../img/main-bridge-tablet@2x.jpg");
-    }
+  .goal:nth-child(3) .goal__content {
+    order: 1;
   }
 
   .goal__title {
@@ -152,6 +126,25 @@
     padding: 52px 0 58px;
   }
 
+  .goal__pic-container {
+    height: 256px;
+
+    .goal__pic {
+      margin-top: -71px;
+    }
+  }
+
+  .goal:nth-child(3) {
+    .goal__pic {
+      margin-top: -76px;
+    }
+
+    .goal__description {
+      padding-left: 84px;
+      padding-right: 84px; //для пп
+    }
+  }
+
   .goal_gray-style.goal__content {
     padding-top: 45px; //пиксельперфект
     padding-bottom: 39px;
@@ -163,25 +156,8 @@
     padding-right: 125px;
   }
 
-  .goal__pic {
-    background-image: url("../../img/main-city-desktop@1x.jpg");
-    background-position: center left;
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../../img/main-city-desktop@2x.jpg");
-    }
-  }
-
-  .goal:nth-child(3) .goal__pic {
-    background-image: url("../../img/main-bridge-desktop@1x.jpg");
-    background-position: 0 53%;
-
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../../img/main-bridge-desktop@2x.jpg");
-    }
-  }
-
   .goal_gray-style .goal__description {
     padding: 0 55px;
   }
+
 }
