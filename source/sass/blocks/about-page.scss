@@ -9,7 +9,7 @@
   margin: 0 auto 10px; //паддинг не получается, потому, что треугольник
 
   &::after {
-    background: url("../../img/bg-triangle.svg");
+    background: url("../img/bg-triangle.svg");
     background-position: bottom;
     display: block;
     position: absolute;
