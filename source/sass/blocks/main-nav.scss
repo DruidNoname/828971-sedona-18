@@ -17,6 +17,26 @@
   a {
     @include nav-link;
   }
+
+  &:hover {
+       color: $simply-blue;
+     }
+
+  &:active {
+    color: $coffee;
+  }
+
+  &:active:hover {
+    color: $strong-coffee;
+  }
+
+  &:disabled {
+    color: rgba(0, 0, 0, 0.3);
+  }
+
+  &:active:disabled {
+    color: rgba(118, 99, 87, 0.3);
+  }
 }
 
 .main-nav__logo {

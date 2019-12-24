@@ -52,6 +52,11 @@
   color: $simply-gray;
 }
 
+.goal__pic-container {
+  display: flex;
+  align-items: center;
+}
+
 .goal__pic {
   display: block;
 }
@@ -123,20 +128,17 @@
 @media (min-width: 1200px) {
   .goal:nth-child(2) .goal__content,
   .goal__content {
-    padding: 52px 0 58px;
+    padding: 52px 0 32px;
   }
 
   .goal__pic-container {
     height: 256px;
-
-    .goal__pic {
-      margin-top: -71px;
-    }
   }
 
   .goal:nth-child(3) {
+
     .goal__pic {
-      margin-top: -76px;
+      padding-bottom: 9px; //позиционирование второй картинки
     }
 
     .goal__description {

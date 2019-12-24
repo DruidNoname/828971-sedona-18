@@ -7,4 +7,13 @@
   font-size: 21px;
   font-weight: 700;
   padding: 14px 0 13px;
+
+  &:hover {
+    background: $faded-blue;
+    cursor: pointer;
+  }
+
+  &:disabled {
+    background: $accent-gray;
+  }
 }

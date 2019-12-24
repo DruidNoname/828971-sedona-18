@@ -81,7 +81,7 @@
 
 .interview__input {
   flex-grow: 1; //чтобы поля растягивались по всей оставшейся ширине
-  background: rgba($simply-gray, 0.2);
+  background: $input-gray;
   border: none;
   max-width: 100%;
   padding: 18px 0 20px; //размер инпута
@@ -89,6 +89,16 @@
   font-size: 18px;
   font-weight: bold;
   position: relative;
+
+  &:hover {
+    background: $accent-gray;
+  }
+
+  &:focus {
+    outline: 3px solid $accent-gray;
+    outline-offset: -3px;
+    background: #ffffff;
+  }
 }
 
 .interview__switcher-label {
@@ -100,11 +110,13 @@
   margin-bottom: 15px;
 
   &::before { //модные радиокнопки
+    position: relative;
+    float: left; //это нужно для ИЕ. ХЗ как, но это работает.
     content: "";
     width: 55px;
     height: 55px;
     border-radius: 28px;
-    background: #f2f2f2;
+    background: $input-gray;
     margin-right: 25px; //отодвигаем текст от чекбокса
   }
 
@@ -120,6 +132,22 @@
     opacity: 0;
   }
 }
+
+.interview__switcher-label:hover {
+  &::before {
+    background: $accent-gray;
+  }
+}
+
+.interview__switcher-label:disabled {
+  &::before {
+    background: $disabled-gray;
+  }
+  &::after {
+    opacity: 0.3;
+  }
+}
+
 
 .interview__switcher-label:last-child { //обнуляем последний отступ
   margin-bottom: 0;
@@ -391,6 +419,7 @@
 
     .interview__input {
       max-width: 232px;
+      max-height: 20px;
     }
   }
 

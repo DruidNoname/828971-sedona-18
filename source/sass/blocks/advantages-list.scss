@@ -6,7 +6,6 @@
   flex-direction: column;
   justify-content: space-between;
   margin: 18px 41px 29px 0;
-  width: 100%; //для ИЕ
 }
 
 .advantages-list__item {
@@ -82,6 +81,7 @@
 @media (min-width: 1200px) {
   .advantages-list {
     padding-bottom: 83px;
+    width: 100%; //для ИЕ
   }
 
   .advantages-list__item {
