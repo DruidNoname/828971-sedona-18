@@ -8,7 +8,7 @@
 }
 
 .goal:nth-child(2) .goal__content {
-  padding-top: 70px; //здесь паддинг больше из-за белой стрелки вверху
+  padding-top: 72px; //здесь паддинг больше из-за белой стрелки вверху
 }
 
 .goal_gray-style {
@@ -43,7 +43,7 @@
 }
 
 .goal__description {
-  padding: 0 29px 40px;
+  padding: 0 29px 39px;
 }
 
 
@@ -53,17 +53,9 @@
 }
 
 .goal__pic {
-  background-image: url("../../img/main-city-mobile@1x.jpg");
-  background-position: top left;
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 260px; //высота картинки на мобиле
-  width: 100%;
+  display: block;
 }
 
-.goal:nth-child(3) .goal__pic {
-  background-image: url("../../img/main-bridge-mobile@1x.jpg");
-}
 
 @media (min-width: 768px) {
   .goal {
@@ -90,16 +82,14 @@
   }
 
 
-  .goal__pic {
+  .goal__pic-container {
     flex-basis: 66%;
     flex-grow: 2;
-    background-image: url("../../img/main-city-tablet@1x.jpg");
-    min-height: auto; //здесь и далее высота картинки нам не нужна
+    overflow: hidden;
   }
 
-  .goal:nth-child(3) .goal__pic {
-    background-image: url("../../img/main-bridge-tablet@1x.jpg");
-    order: -1;
+  .goal:nth-child(3) .goal__content {
+    order: 1;
   }
 
   .goal__title {
@@ -136,6 +126,25 @@
     padding: 52px 0 58px;
   }
 
+  .goal__pic-container {
+    height: 256px;
+
+    .goal__pic {
+      margin-top: -71px;
+    }
+  }
+
+  .goal:nth-child(3) {
+    .goal__pic {
+      margin-top: -76px;
+    }
+
+    .goal__description {
+      padding-left: 84px;
+      padding-right: 84px; //для пп
+    }
+  }
+
   .goal_gray-style.goal__content {
     padding-top: 45px; //пиксельперфект
     padding-bottom: 39px;
@@ -145,16 +154,6 @@
   .goal_gray-style .goal__title {
     padding-left: 125px; //для позиционирования заголовка
     padding-right: 125px;
-  }
-
-  .goal__pic {
-    background-image: url("../../img/main-city-desktop@1x.jpg");
-    background-position: center left;
-  }
-
-  .goal:nth-child(3) .goal__pic {
-    background-image: url("../../img/main-bridge-desktop@1x.jpg");
-    background-position: 0 53%;
   }
 
   .goal_gray-style .goal__description {
