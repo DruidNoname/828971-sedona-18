@@ -45,6 +45,18 @@
   margin-right: 28px;
 }
 
+.video-interface__controller-icon {
+  width: 20px;
+  height: 20px;
+  fill: #5c6870;
+}
+
+.shadow-dom {
+  width: 40px;
+  height: 40px;
+  fill: rgb(163, 163, 243);
+}
+
 @media (min-width: 768px) {
   .video-interface {
     margin: 0 60px;
@@ -75,6 +87,10 @@
 
   .video-interface__controller:last-child {
     order: 2;
+  }
+
+  .video-interface__controller-icon {
+    fill: #ffffff;
   }
 }
 
