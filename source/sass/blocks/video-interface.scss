@@ -45,6 +45,11 @@
   margin-right: 28px;
 }
 
+.video-interface__controller-icon {
+  height: 20px;
+  fill: #5c6870;
+}
+
 @media (min-width: 768px) {
   .video-interface {
     margin: 0 60px;
@@ -52,7 +57,7 @@
   }
 
   .video-interface__navbar {
-    height: 92px;
+    height: 93px;
     flex-wrap: nowrap;
     background-image: none;
     padding: 0 39px 0 34px;
@@ -69,23 +74,27 @@
   }
 
   .video-interface__progress-slider {
-    top: calc(49% - 5px);
-    left: 32%;
+    top: calc(49% - 4px);
+    left: 31.6%;
   }
 
   .video-interface__controller:last-child {
     order: 2;
+  }
+
+  .video-interface__controller-icon {
+    fill: #ffffff;
   }
 }
 
 @media (min-width: 1200px) {
   .video-interface {
     margin: 0 200px;
-    padding-bottom: 76px;
+    padding-bottom: 80px;
   }
 
   .video-interface__navbar {
-    bottom: 83px;
+    bottom: 87px;
   }
 
   .video-interface__progress-slider {
