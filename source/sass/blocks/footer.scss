@@ -1,12 +1,12 @@
 .footer {
   @include usual-text;
   @include usual-text-sizing;
-  padding-top: 33px;
+  padding-top: 35px;
   padding-bottom: 20px;
 }
 
 .footer__slogan {
-  margin-bottom: 33px;
+  margin-bottom: 34px;
   font-size: 21px;
   font-weight: 700;
   text-align: center;
@@ -15,17 +15,30 @@
 .footer__social {
   display: flex;
   justify-content: center;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
 }
 
 .footer__social-item {
   display: flex;
   justify-content: center;
+  align-items: center;
+  max-width: 47px;
   flex-basis: 47px;
   height: 48px;
   background: $simply-blue;
   color: #ffffff;
   margin: 0 3px;
+  padding: 0;
+}
+
+.footer__social-icon {
+  height: 14px;
+  fill: #ffffff;
+}
+
+.footer__social-item:nth-child(2) .footer__social-icon {
+  height: 18px;
+  padding-left: 11px; //чтобы фейсбук картинка центровалась
 }
 
 .footer__trademark {
@@ -35,10 +48,13 @@
 }
 
 .footer__logo-academy {
-  width: 40px;
-  height: auto;
-  margin-right: -9px;
-  padding-left: 6px;
+  width: 27px;
+  height: 34px;
+  padding-left: 13px;
+
+  &:hover {
+    fill: $simply-blue;
+  }
 }
 
 @media (min-width: 768px) {
@@ -79,12 +95,16 @@
 
 @media (min-width: 1200px) {
   .footer {
-    padding-top: 36px;
-    padding-bottom: 33px;
+    padding-top: 34px;
   }
 
   .footer__social {
     flex-basis: 17%;
     margin: 0 4px;
+  }
+
+  .footer__logo-academy {
+    padding-left: 11px;
+    margin-right: -8px;
   }
 }

@@ -31,15 +31,14 @@
 
 .photo-cell__likes {
   font-weight: 700;
+}
 
-  &::before {
-    display: inline-block;
-    content: "";
-    width: 23px;
-    height: 21px;
-    margin-right: 14px;
-    background: url("../img/icon-like.svg") 0 0/ cover no-repeat;
-  }
+.photo-cell__like-icon {
+  margin-right: 11px;
+  fill: rgb(0, 0, 0);
+  opacity: 0.3;
+  width: 23px;
+  height: 21px;
 }
 
 @media (min-width: 768px) {
@@ -74,10 +73,6 @@
     margin-top: 0;
     display: flex;
     flex-basis: 68px;
-
-    &::before {
-      display: block;
-    }
   }
 }
 
@@ -95,5 +90,10 @@
     bottom: 0;
     left: 0;
     right: 0;
+  }
+
+  .photo-cell__like-icon {
+    fill: #ffffff;
+    opacity: 1;
   }
 }
