@@ -38,7 +38,6 @@
 
 .footer__social-item:nth-child(2) .footer__social-icon {
   height: 18px;
-  padding-left: 11px; //чтобы фейсбук картинка центровалась
 }
 
 .footer__trademark {
@@ -48,6 +47,7 @@
 }
 
 .footer__logo-academy {
+  fill: #000000;
   width: 27px;
   height: 34px;
   padding-left: 13px;
