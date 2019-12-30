@@ -14,14 +14,14 @@ gulp.task("copy-files", function () {
     .pipe(gulp.dest("build"));
   });
 
-var gulp = require("gulp");
+
 var del = require("del");
 
 gulp.task("clean-folder", function () {
   return del("build");
 });
 
-var gulp = require("gulp");
+
 var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");
 var sass = require("gulp-sass");
@@ -47,8 +47,6 @@ gulp.task("css", function () {
     .pipe(gulp.dest("build/css"));
 });
 
-
-var gulp = require("gulp");
 var svgstore = require("gulp-svgstore");
 
 gulp.task("sprite", function () {
@@ -61,7 +59,6 @@ gulp.task("sprite", function () {
 });
 
 
-var gulp = require("gulp");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 
@@ -73,7 +70,7 @@ gulp.task("html", function () {
     .pipe(gulp.dest("build"));
 });
 
-var gulp = require("gulp");
+
 gulp.task("build", gulp.series(
   "clean-folder",
   "copy-files",
@@ -82,7 +79,6 @@ gulp.task("build", gulp.series(
   "html"
 ));
 
-var gulp = require("gulp");
 
 gulp.task("server", function () {
   server.init({
