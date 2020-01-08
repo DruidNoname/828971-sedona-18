@@ -28,6 +28,10 @@
   }
 }
 
+.main-nav__active {
+  display: block;
+}
+
 .main-nav__logo {
   position: absolute;
   left: calc(50% - 50px);
@@ -43,9 +47,14 @@
     li {
       flex: 1;
     }
+
+    li:first-child { //это обертка под кнопку-крестик в мобильной вёрстке
+      display: none;
+    }
   }
 
   .main-nav__item {
+    display: block;
     padding: 20px 0 20px;
     box-shadow: none;
   }
@@ -54,8 +63,8 @@
     order: 0;
   }
 
-  .main-nav__wrapper li:nth-child(3),
-  .main-nav__wrapper li:nth-child(4) {
+  .main-nav__wrapper li:nth-last-child(3),
+  .main-nav__wrapper li:nth-last-child(2) {
     order: 1;
   }
 }

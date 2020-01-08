@@ -9,13 +9,24 @@
 .page-header__bar {
   display: block;
   text-align: right;
+  height: 55px;
 }
 
 .page-header__toggle-button {
+  display: none;
   text-align: right;
   border: 0;
   background: transparent;
   padding: 16px 20px 13px;
+}
+
+.page-header__active {
+  display: inline-block;
+}
+
+.page-header__cross {
+  position: absolute;
+  right: 10px;
 }
 
 
