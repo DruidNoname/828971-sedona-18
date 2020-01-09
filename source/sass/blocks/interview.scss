@@ -70,7 +70,7 @@
 .interview__contact-icon {
   width: 20px;
   height: 20px;
-  background: rgba($simply-gray, 0.3);
+  background: #e6e6e6;
   border: 19px solid transparent;
 }
 
@@ -117,7 +117,7 @@
     height: 55px;
     border-radius: 28px;
     background: $input-gray;
-    margin-right: 25px; //отодвигаем текст от чекбокса
+    margin-right: 23px; //отодвигаем текст от чекбокса
   }
 
   &::after { //точка внутри радио
@@ -196,7 +196,7 @@
 }
 
 .interview__button {
-  padding: 25px 0 38px;
+  padding: 25px 0 35px;
 
   .button {
     width: 280px;
@@ -209,7 +209,7 @@
 @media (min-width: 768px) {
   .interview {
     margin: 0 60px;
-    padding-bottom: 23px;
+    padding-bottom: 24px;
   }
 
   .interview__form {
@@ -223,7 +223,7 @@
     flex-basis: 100%;
     border-top: none;
     justify-content: flex-start;
-    padding: 14px 0 51px;
+    padding: 14px 0 52px;
   }
 
   .interview__form-block:first-child,
@@ -272,7 +272,7 @@
     display: inline-block;
     position: absolute;
     content: "";
-    width: 150px;
+    width: 125px;
     height: 1px;
     background: rgba($simply-gray, 0.2);
     line-height: 1em;
@@ -325,7 +325,7 @@
   }
 
   .interview__input_textarea {
-    margin: 30px 0 9px; //здесь опять отступ от элемента потому, что к нему легче обратиться, чем к однотипному заголовку или однотипному контейнеру
+    margin: 30px 0 6px; //здесь опять отступ от элемента потому, что к нему легче обратиться, чем к однотипному заголовку или однотипному контейнеру
   }
 
   .interview__button { //контейнер для кнопки со сноской-псевдоэлементом
@@ -375,6 +375,10 @@
     .interview__title {
       margin-bottom: 57px;
     }
+  }
+
+  .interview__form-block:nth-child(4) .interview__title_decorate {
+    margin-bottom: 38px;
   }
 
   .interview__form-block:first-child {

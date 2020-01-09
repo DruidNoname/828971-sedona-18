@@ -10,9 +10,11 @@
 <header class="page-header">
   <nav class="main-nav">
       <ul class="main-nav__wrapper">
-        <button class="js__toggle-button2 page-header__toggle-button page-header__cross">
-          <img class="page-header__cross" src="img/icon-cross.svg" alt="">
-        </button>
+        <li>
+          <button class="js__toggle-button2 page-header__toggle-button page-header__cross">
+            <img class="page-header__cross" src="img/icon-cross.svg" alt="">
+          </button>
+        </li>
         <li class="main-nav__item"><a href="index.html">Главная</a></li>
         <li class="main-nav__item"><a>Фото и видео</a></li>
         <li class="main-nav__item"><a href="form.html">Форма отзыва</a></li>
@@ -29,7 +31,9 @@
       </ul>
   </nav>
   <div class="page-header__bar">
-    <button class="page-header__toggle-button"><img class="page-header__ham" src="img/icon-menu.svg" alt=""></button>
+    <button class="page-header__toggle-button js__toggle-button1 page-header__active">
+      <img class="page-header__ham" src="img/icon-menu.svg" alt="">
+    </button>
   </div>
 </header>
 <main>
@@ -47,7 +51,7 @@
       <picture>
         <source type="img/webp" media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.webp 1x, img/photo-sunset-desktop@2x.webp 2x">
         <source type="img/webp" media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.webp 1x, img/photo-sunset-tablet@2x.webp 2x">
-        <source type="img/webp" srcset="img/photo-sunset-mobile@1x.webp 1x, img/photo-sunset-mobile@2x.webp 2x" class="photo-cell__pic">
+        <source type="img/webp" srcset="img/photo-sunset-mobile@1x.webp 1x, img/photo-sunset-mobile@2x.webp 2x">
 
         <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
         <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
@@ -71,7 +75,7 @@
       <picture>
         <source type="img/webp" media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.webp 1x, img/photo-cactus-desktop@2x.webp 2x">
         <source type="img/webp" media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.webp 1x, img/photo-cactus-tablet@2x.webp 2x">
-        <source type="img/webp" srcset="img/photo-cactus-mobile@1x.webp 1x, img/photo-cactus-mobile@2x.webp 2x" class="photo-cell__pic">
+        <source type="img/webp" srcset="img/photo-cactus-mobile@1x.webp 1x, img/photo-cactus-mobile@2x.webp 2x">
 
         <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
         <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
@@ -91,7 +95,7 @@
       <picture>
         <source type="img/webp" media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.webp 1x, img/photo-roads-desktop@2x.webp 2x">
         <source type="img/webp" media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.webp 1x, img/photo-roads-tablet@2x.webp 2x">
-        <source type="img/webp" srcset="img/photo-roads-mobile@1x.webp 1x, img/photo-roads-mobile@2x.webp 2x" class="photo-cell__pic">
+        <source type="img/webp" srcset="img/photo-roads-mobile@1x.webp 1x, img/photo-roads-mobile@2x.webp 2x">
 
         <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
         <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
@@ -186,6 +190,6 @@
   </svg></div>
 </footer>
 <script src="js/picturefill.js" type="text/javascript"></script>
-<script src="js/toggle.js" type="text/javascript"></script>
+<!--<script src="js/toggle.js" type="text/javascript"></script>-->
 </body>
 </html>

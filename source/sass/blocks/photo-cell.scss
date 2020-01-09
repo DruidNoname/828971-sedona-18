@@ -61,8 +61,12 @@
   .photo-cell__pic-info {
     display: flex;
     align-items: center;
-    background: #eaeaea;
+    background: #f2f2f2;
     padding: 15px 20px 12px;
+  }
+
+  .photo-cell:nth-child(3) .photo-cell__pic-info {
+    background: #eaeaea; //дизайнер решил, что этот блок другого цвета
   }
 
   .photo-cell__about-pic {

@@ -2,10 +2,12 @@ var elem1 = document.querySelector(".js__toggle-button1");
 var elem2 = document.querySelector(".js__toggle-button2");
 var mainNav = document.querySelectorAll(".main-nav__item");
 
-
-for (var i = 0; i < 4; i++){
-  mainNav[i].style.display="none";
+if(document.documentElement.clientWidth < 768){
+  for (var i = 0; i < 4; i++){
+    mainNav[i].style.display="none";
+  }
 }
+
 
 elem1.onclick = function(){
   elem1.classList.remove("page-header__active");

@@ -3,7 +3,7 @@ ymaps.ready(init);
 function init(){
   var myMap = new ymaps.Map("map", {
     // Координаты центра карты.
-    center: [35.05, -111.70],
+    center: [35.08, -111.71],
     zoom: 7
   });
 
@@ -15,7 +15,7 @@ function init(){
     {
       iconLayout: "default#image",
       iconImageHref: "img/icon-map-marker.svg",
-      iconImageSize: [33, 33]
+      iconImageSize: [31, 31]
     }
   ));
 
