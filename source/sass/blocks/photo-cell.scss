@@ -96,6 +96,10 @@
     right: 0;
   }
 
+  .photo-cell:nth-child(3) .photo-cell__pic-info {
+    background: rgba(0, 0, 0, 0.4); //дизайнер решил, что этот блок другого цвета
+  }
+
   .photo-cell__like-icon {
     fill: #ffffff;
     opacity: 1;
