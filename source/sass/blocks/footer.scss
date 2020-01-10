@@ -6,7 +6,7 @@
 }
 
 .footer__slogan {
-  margin-bottom: 34px;
+  margin-bottom: 33px;
   font-size: 21px;
   font-weight: 700;
   text-align: center;
@@ -15,7 +15,7 @@
 .footer__social {
   display: flex;
   justify-content: center;
-  margin-bottom: 37px;
+  margin-bottom: 35px;
 }
 
 .footer__social-item {
@@ -38,7 +38,6 @@
 
 .footer__social-item:nth-child(2) .footer__social-icon {
   height: 22px;
-  padding-left: 12px;
 }
 
 .footer__trademark {
@@ -47,11 +46,15 @@
   align-items: center;
 }
 
+.footer__firmname {
+  padding: 0 6px;
+}
+
+
 .footer__logo-academy {
   fill: #000000;
-  width: 27px;
-  height: 34px;
-  padding-left: 13px;
+  width: 40px;
+  height: 38px;
 
   &:hover {
     fill: $simply-blue;
@@ -63,7 +66,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-top: 36px;
+    padding-top: 35px;
     padding-bottom: 33px;
   }
 

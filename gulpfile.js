@@ -18,6 +18,10 @@ var include = require("posthtml-include");
 var uglify = require('gulp-uglify')
 
 
+gulp.task("clean-folder", function () {
+  return del("build");
+});
+
 gulp.task("copy-files", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
@@ -29,10 +33,6 @@ gulp.task("copy-files", function () {
   })
     .pipe(gulp.dest("build"));
   });
-
-gulp.task("clean-folder", function () {
-  return del("build");
-});
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -58,11 +58,13 @@ gulp.task("sprite", function () {
     .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("images", function () {
+gulp.task("images", function (){
   return gulp.src("source/img/**/*.{png,jpg,svg}")
-    .pipe(imagemin([
-    imagemin.optipng({optimizationLevel: 3})
-    ]))
+      .pipe(imagemin([
+        imagemin.optipng({optimizationLevel: 3}),
+        imagemin.jpegtran({progressive: true}),
+        imagemin.svgo()
+      ]))
     .pipe(gulp.dest("build/img"));
 });
 
@@ -100,8 +102,8 @@ gulp.task("build", gulp.series(
   "clean-folder",
   "copy-files",
   "css",
-  "sprite",
   "images",
+  "sprite",
   "html",
   "minify-html",
   "uglify"

@@ -48,6 +48,7 @@
     "node": "8.16"
   },
   "dependencies": {
-    "gulp-uglify": "^3.0.2"
+    "gulp-uglify": "^3.0.2",
+    "svgxuse": "^1.2.6"
   }
 }
