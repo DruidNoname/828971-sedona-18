@@ -84,6 +84,7 @@
 
   .video-interface__controller-icon {
     fill: #ffffff;
+    max-width: 50px; //ограничение для internet explorer
   }
 }
 
@@ -99,5 +100,12 @@
 
   .video-interface__progress-slider {
     left: 25.5%;
+  }
+
+  .video-interface__controller:last-child {
+    display: flex;
+    justify-content: space-between;
+    width: 83px;
+    padding-right: 4px;
   }
 }
