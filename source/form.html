@@ -10,9 +10,11 @@
 <header class="page-header">
     <nav class="main-nav">
         <ul class="main-nav__wrapper">
-          <button class="js__toggle-button2 page-header__toggle-button page-header__cross">
-            <img class="page-header__cross" src="img/icon-cross.svg" alt="">
-          </button>
+          <li>
+            <button class="js__toggle-button2 page-header__toggle-button page-header__cross">
+              <img class="page-header__cross" src="img/icon-cross.svg" alt="">
+            </button>
+          </li>
           <li class="main-nav__item"><a href="index.html">Главная</a></li>
           <li class="main-nav__item"><a href="photo.html">Фото и видео</a></li>
           <li class="main-nav__item"><a>Форма отзыва</a></li>
@@ -60,7 +62,7 @@
                 <div class="interview__contacts-wrapper">
                     <label for="phone-number" class="interview__label interview__label_accented"><span class="interview_eracer">Контактный</span>
                         телефон<sup>*</sup>:</label>
-                    <input id="phone-number" type="tel" class="interview__input interview__input_separate" placeholder="Введите телефон">
+                    <input id="phone-number" type="tel" class="interview__input interview__input_separate" placeholder="Введите телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minlength="18" maxlength="18" required>
                   <svg class="interview__contact-icon" viewBox="0 0 18 18">
                     <g id="Page-1">
                       <g id="Icons-Communication" transform="translate(-85.000000, -126.000000)">
@@ -72,7 +74,7 @@
                   </svg>
                   <label for="e-mail" class="interview__label interview__label_accented">Электронная
                         почта<sup>*</sup>:</label>
-                  <input id="e-mail" type="email" class="interview__input interview__input_separate" placeholder="Введите e-mail">
+                  <input id="e-mail" type="email" class="interview__input interview__input_separate" placeholder="Введите e-mail" required>
                   <svg class="interview__contact-icon" viewBox="0 0 16 16">
                     <path d="M8,10c-0.266,0-0.5-0.094-1-0.336L0,6v7c0,0.55,0.45,1,1,1h14c0.55,0,1-0.45,1-1V6L9,9.664C8.5,9.906,8.266,10,8,10z M15,2 H1C0.45,2,0,2.45,0,3v0.758l8,4.205l8-4.205V3C16,2.45,15.55,2,15,2z"/>
                   </svg>
