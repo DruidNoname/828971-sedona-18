@@ -138,11 +138,12 @@
   .goal:nth-child(3) {
     .goal__pic {
       padding-bottom: 9px; //позиционирование второй картинки
+      align-self: stretch;
     }
 
     .goal__description {
-      padding-left: 84px;
-      padding-right: 84px; //для пп
+      padding-left: 83px;
+      padding-right: 83px; //для пп
     }
   }
 
