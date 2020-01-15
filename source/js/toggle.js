@@ -1,5 +1,5 @@
-var elemOpen = document.querySelector(".js__toggle-button1");
-var elemClose = document.querySelector(".js__toggle-button2");
+var elemOpen = document.querySelector(".js-toggle-button1");
+var elemClose = document.querySelector(".js-toggle-button2");
 var mainNav = document.querySelectorAll(".main-nav__item");
 
 if(document.documentElement.clientWidth < 768){
