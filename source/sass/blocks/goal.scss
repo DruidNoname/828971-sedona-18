@@ -36,6 +36,10 @@
   font-weight: bold;
   padding: 0 53px;
   margin-bottom: 8px;
+
+  @-moz-document url-prefix("") {
+    padding: 0 50px; //для позиционирования заголовка в файрфоксе
+  }
 }
 
 .goal__number {
@@ -44,12 +48,20 @@
 
 .goal__description {
   padding: 0 29px 40px;
+
+  @-moz-document url-prefix("") {
+    padding: 0 25px 40px;
+  }
 }
 
 
 .goal_gray-style .goal__description {
   padding: 0 37px; //здесь паддинги почему-то больше
   color: $simply-gray;
+
+  @-moz-document url-prefix("") {
+    padding: 0 35px;
+  }
 }
 
 .goal__pic-container {
@@ -60,7 +72,6 @@
 .goal__pic {
   display: block;
 }
-
 
 @media (min-width: 768px) {
   .goal {
@@ -156,16 +167,14 @@
   .goal_gray-style .goal__title {
     padding-left: 125px; //для позиционирования заголовка
     padding-right: 125px;
+
+    @-moz-document url-prefix("") {
+        padding-left: 125px; //для позиционирования заголовка в файрфоксе
+        padding-right: 124px;
+    }
   }
 
   .goal_gray-style .goal__description {
     padding: 0 55px;
-  }
-
-  @-moz-document url-prefix() {
-    .goal__title {
-      padding-left: 123px; //для позиционирования заголовка в файрфоксе
-      padding-right: 122px;
-    }
   }
 }

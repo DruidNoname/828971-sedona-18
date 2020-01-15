@@ -6,6 +6,10 @@
   flex-direction: column;
   justify-content: space-between;
   margin: 18px 41px 29px 0;
+
+  @-moz-document url-prefix("") {
+    margin-bottom: 32px;
+  }
 }
 
 .advantages-list__item {
@@ -34,7 +38,12 @@
   line-height: 1.44;
   color: #000000;
   margin-bottom: 17px;
+
+  @-moz-document url-prefix("") {
+    margin-bottom: 15px;
+  }
 }
+
 
 @media (min-width: 768px) {
   .advantages-list {

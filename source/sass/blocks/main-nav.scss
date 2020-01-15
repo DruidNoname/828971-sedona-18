@@ -26,6 +26,10 @@
   &:disabled {
     background: $accent-gray;
   }
+
+  @-moz-document url-prefix("") {
+    padding-top: 19px;
+  }
 }
 
 .main-nav__active {

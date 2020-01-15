@@ -9,6 +9,10 @@
   @media (min-resolution: $retina-dppx) {
     background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@2x.jpg");
   }
+
+  @-moz-document url-prefix("") {
+    padding-top: 91px;
+  }
 }
 
 .main-banner_short-version {

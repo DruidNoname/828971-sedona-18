@@ -3,6 +3,10 @@
   @include usual-text-sizing;
   padding-top: 35px;
   padding-bottom: 20px;
+
+  @-moz-document url-prefix("") {
+    padding-top: 33px;
+  }
 }
 
 .footer__slogan {

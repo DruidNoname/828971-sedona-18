@@ -36,12 +36,17 @@
   font-weight: bold;
   padding: 0 32px;
   margin-bottom: 28px; //это надо для соблюдения пиксель перфект
+
+  @-moz-document url-prefix("") {
+    padding: 0 27px;
+  }
 }
 
 .about-page__description {
   color: $simply-gray;
   padding: 0 25px;
 }
+
 
 @media (min-width: 768px) {
   .about-page {
