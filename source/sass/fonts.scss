@@ -6,7 +6,21 @@
 }
 
 @font-face {
-  font-family: "PTSans-Bold";
+  font-family: "PTSans";
+  src: url("../fonts/ptsansbold.woff2"), url("../fonts/ptsansbold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PTSans";
+  src: url("../fonts/ptsans.woff") format("woff"), url("../fonts/ptsans.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PTSans";
   src: url("../fonts/ptsansbold.woff"), url("../fonts/ptsansbold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
