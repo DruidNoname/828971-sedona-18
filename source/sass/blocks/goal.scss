@@ -111,6 +111,11 @@
   .goal__title {
     font-size: 21px;
     line-height: 26px;
+
+    @-moz-document url-prefix("") {
+      padding-left: 53px; //для позиционирования заголовка в файрфоксе. Здесь очень опасно: один пиксель уберёшь - и заголовок сваливается в три строки.
+      padding-right: 52px;
+    }
   }
 
   .goal_gray-style {
@@ -169,8 +174,8 @@
     padding-right: 125px;
 
     @-moz-document url-prefix("") {
-        padding-left: 125px; //для позиционирования заголовка в файрфоксе
-        padding-right: 124px;
+      padding-left: 125px; //для позиционирования заголовка в файрфоксе
+      padding-right: 124px;
     }
   }
 

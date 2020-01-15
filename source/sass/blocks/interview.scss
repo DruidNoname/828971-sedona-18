@@ -10,7 +10,7 @@
   flex-direction: column;
   justify-content: center;
   border-top: 1px solid rgba($simply-gray, 0.1);
-  padding: 20px 20px 26px; //отступы по бокам здесь, иначе инпуты за них вылазят
+  padding: 19px 20px 26px; //отступы по бокам здесь, иначе инпуты за них вылазят
 }
 
 .interview__title {
@@ -67,11 +67,18 @@
   }
 }
 
+.interview__inpit-holder {
+  display: flex;
+  flex-grow: 1;
+}
+
+
 .interview__contact-icon {
   width: 20px;
   height: 20px;
   background: #e6e6e6;
   border: 19px solid transparent;
+  flex-shrink: 0;
 }
 
 .interview__label, //просто отступы в мобильной вёрстке
@@ -148,7 +155,6 @@
     opacity: 0.3;
   }
 }
-
 
 .interview__switcher-label:last-child { //обнуляем последний отступ
   margin-bottom: 0;
@@ -291,6 +297,10 @@
     padding-bottom: 15px;
   }
 
+  .interview__contacts-wrapper {
+    flex-direction: column;
+  }
+
   .interview__contacts-wrapper .interview__input_separate { //стилизация полей с телефоном
     flex-basis: 85%; //иконка со строкой норм встаёт
     margin-bottom: 21px;
@@ -394,7 +404,6 @@
     }
   }
 
-
   .interview__title_decorate {
     margin-bottom: 73px;
 
@@ -409,6 +418,7 @@
   }
 
   .interview__contacts-wrapper {
+    flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: center;
@@ -416,6 +426,7 @@
     .interview__label_accented,
     .interview__input {
       margin: 0;
+      flex-shrink: 0;
     }
 
     .interview__label_accented {
@@ -423,18 +434,17 @@
     }
 
     .interview__input {
-      max-width: 232px;
       max-height: 20px;
+      max-width: 232px; //для соблюдения пп
+    }
+
+    .interview__inpit-holder:first-of-type {
+      margin-right: 79px;
     }
   }
 
   .interview_eracer {
     display: none;
-  }
-
-
-  .interview__contact-icon:first-of-type {
-    margin-right: 79px;
   }
 
   .interview__list {
