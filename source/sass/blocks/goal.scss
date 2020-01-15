@@ -161,4 +161,11 @@
   .goal_gray-style .goal__description {
     padding: 0 55px;
   }
+
+  @-moz-document url-prefix() {
+    .goal__title {
+      padding-left: 123px; //для позиционирования заголовка в файрфоксе
+      padding-right: 122px;
+    }
+  }
 }
