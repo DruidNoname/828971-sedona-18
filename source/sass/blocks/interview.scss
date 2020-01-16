@@ -10,7 +10,7 @@
   flex-direction: column;
   justify-content: center;
   border-top: 1px solid rgba($simply-gray, 0.1);
-  padding: 19px 20px 26px; //отступы по бокам здесь, иначе инпуты за них вылазят
+  padding: 21px 20px 23px; //отступы по бокам здесь, иначе инпуты за них вылазят
 }
 
 .interview__title {
@@ -48,7 +48,6 @@
   margin: 0; //обнуление марджина последнего элемента
 }
 
-
 .interview__form-block:nth-child(2) { //во втором элементе нижний отступ меньше
   padding-bottom: 18px;
 }
@@ -72,7 +71,6 @@
   flex-grow: 1;
 }
 
-
 .interview__contact-icon {
   width: 20px;
   height: 20px;
@@ -81,18 +79,11 @@
   flex-shrink: 0;
 }
 
-.interview__label, //просто отступы в мобильной вёрстке
-.interview__input_separate {
-  margin-bottom: 23px;
-}
-
 .interview__input {
   flex-grow: 1; //чтобы поля растягивались по всей оставшейся ширине
   background: $input-gray;
   border: none;
-  max-width: 100%;
-  padding: 18px 0 20px; //размер инпута
-  padding-left: 23px;
+  padding: 18px 0 20px 23px; //размер инпута
   font-size: 18px;
   font-weight: bold;
   position: relative;
@@ -106,6 +97,14 @@
     outline-offset: -3px;
     background: #ffffff;
   }
+}
+
+.interview__input::placeholder {
+  color: #000000;
+}
+
+.interview__input::-moz-placeholder { //здесь автопрефиксер не распространяется
+  color: #000000;
 }
 
 .interview__switcher-label {
@@ -201,8 +200,14 @@
   padding: 14px 20px;
 }
 
-.interview__button {
-  padding: 25px 0 35px;
+.interview__button-container {
+  padding: 31px 0 35px;
+
+  .interview__button {
+    border: none;
+    background: transparent;
+    padding: 0;
+  }
 
   .button {
     width: 280px;
@@ -259,11 +264,11 @@
     margin: 14px 0 51px; //патамушта полосочка...
   }
 
-  .interview__title_decorate {
+  .interview__line-decorator {
     position: relative;
     width: 100%;
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 23px;
   }
 
   .interview__title {
@@ -273,8 +278,8 @@
     margin-bottom: 0;
   }
 
-  .interview__title_decorate::before, //собственно горизонтальные линеечки
-  .interview__title_decorate::after {
+  .interview__line-decorator::before, //собственно горизонтальные линеечки
+  .interview__line-decorator::after {
     display: inline-block;
     position: absolute;
     content: "";
@@ -285,11 +290,11 @@
     top: 50%;
   }
 
-  .interview__title_decorate::before {
+  .interview__line-decorator::before {
     left: 0;
   }
 
-  .interview__title_decorate::after {
+  .interview__line-decorator::after {
     right: 0;
   }
 
@@ -314,7 +319,7 @@
     font-size: 18px;
   }
 
-  .interview__form-block:nth-child(4) .interview__title_decorate {
+  .interview__form-block:nth-child(4) .interview__line-decorator {
     margin-bottom: 42px;
   }
 
@@ -338,31 +343,34 @@
     margin: 30px 0 6px; //здесь опять отступ от элемента потому, что к нему легче обратиться, чем к однотипному заголовку или однотипному контейнеру
   }
 
-  .interview__button { //контейнер для кнопки со сноской-псевдоэлементом
+  .interview__button-container { //контейнер для кнопки
     display: flex;
     justify-content: space-between;
     align-items: center;
     align-self: flex-start;
     width: 100%;
     padding-top: 0;
+  }
 
-    &::after { //тоже флекс-элемент
-      display: inline-block;
-      text-align: right;
-      text-transform: uppercase;
-      color: #000000;
-      font-family: "PTSans", "Helvetica", "Arial", sans-serif;
-      font-size: 14px;
-      content: "*\0020 -\0020 обязательные поля";
-      width: 300px;
-      height: 1em;
-    }
+  .interview__button {
+    width: 50%;
 
     .button {
-      width: 50%;
+      width: 100%;
       border: none;
       margin: 0;
     }
+  }
+
+  .interview__fields-descriptor {
+    display: inline-block;
+    text-align: right;
+    text-transform: uppercase;
+    color: #000000;
+    font-family: "PTSans", "Helvetica", "Arial", sans-serif;
+    font-size: 14px;
+    width: 300px;
+    height: 1em;
   }
 }
 
@@ -387,7 +395,7 @@
     }
   }
 
-  .interview__form-block:nth-child(4) .interview__title_decorate {
+  .interview__form-block:nth-child(4) .interview__line-decorator {
     margin-bottom: 38px;
   }
 
@@ -404,7 +412,7 @@
     }
   }
 
-  .interview__title_decorate {
+  .interview__line-decorator {
     margin-bottom: 73px;
 
     &::before,
@@ -463,7 +471,7 @@
     margin-top: -20px; //опять выравнивание за счёт этого блока как легкодоступного
   }
 
-  .interview__button {
+  .interview__button-container {
     padding: 9px 0 0;
   }
 }

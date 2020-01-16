@@ -82,9 +82,13 @@
     order: 2;
   }
 
+  .video-interface__controller-button {
+    background: transparent;
+    border: none;
+  }
+
   .video-interface__controller-icon {
     fill: #ffffff;
-    max-width: 50px; //ограничение для internet explorer
   }
 }
 

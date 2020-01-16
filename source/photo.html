@@ -11,16 +11,16 @@
   <nav class="main-nav">
       <ul class="main-nav__wrapper">
         <li>
-          <button class="js-toggle-button2 page-header__toggle-button page-header__cross">
+          <button class="js-toggle-button2 page-header__toggle-button page-header__cross" title="Закрыть главное меню">
             <img class="page-header__cross" src="img/icon-cross.svg" alt="">
           </button>
         </li>
-        <li class="main-nav__item"><a href="index.html">Главная</a></li>
+        <li class="main-nav__item"><a href="index.html" title="На главную страницу">Главная</a></li>
         <li class="main-nav__item"><a>Фото и видео</a></li>
         <li class="main-nav__item"><a href="form.html">Форма отзыва</a></li>
         <li class="main-nav__item"><a href="https://htmlacademy.ru/">HTML Academy</a></li>
         <li>
-          <a class="main-nav__logo">
+          <a class="main-nav__logo" title="На главную страницу">
             <picture class="main-nav__logo-image">
               <source srcset="img/logo-sedona-desktop.svg" media="(min-width: 1200px)">
               <source srcset="img/logo-sedona-tablet.svg" media="(min-width: 768px)">
@@ -162,17 +162,23 @@
         <div class="video-interface__progress"></div>
         <div class="video-interface__progress-slider"></div>
         <div class="video-interface__controller">
-          <svg class="video-interface__controller-icon" viewBox="0 0 16 20">
-            <use xlink:href="img/sprite.svg#icon-video-replay"></use>
-          </svg>
+            <button class="video-interface__controller-button">
+                <svg class="video-interface__controller-icon" viewBox="0 0 16 20" width="16" height="20">
+                    <use xlink:href="img/sprite.svg#icon-video-replay"></use>
+                </svg>
+            </button>
         </div>
         <div class="video-interface__controller">
-          <svg class="video-interface__controller-icon video-interface__controller_position" viewBox="0 0 32 20">
-            <use xlink:href="img/sprite.svg#icon-video-subtitles"></use>
-          </svg>
-          <svg class="video-interface__controller-icon" viewBox="0 0 20 20" enable-background="new 0 0 20 20">
-            <use xlink:href="img/sprite.svg#icon-video-fullscreen"></use>
-          </svg>
+            <button class="video-interface__controller-button">
+                <svg class="video-interface__controller-icon video-interface__controller_position" viewBox="0 0 32 20" width="32" height="20">
+                    <use xlink:href="img/sprite.svg#icon-video-subtitles"></use>
+                </svg>
+            </button>
+            <button class="video-interface__controller-button">
+                <svg class="video-interface__controller-icon" viewBox="0 0 20 20" enable-background="new 0 0 20 20" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#icon-video-fullscreen"></use>
+                </svg>
+            </button>
         </div>
       </div>
     </div>
@@ -181,25 +187,26 @@
 <footer class="footer">
   <div class="footer__slogan">#Visitsedona</div>
   <div class="footer__social">
-    <a href="" class="button footer__social-item footer__twitter">
-      <svg class="footer__social-icon">
-        <use xlink:href="img/sprite.svg#icon-twitter"></use>
-      </svg>
-    </a>
-    <a href="" class="button footer__social-item footer__facebook">
-      <svg class="footer__social-icon">
-        <use xlink:href="img/sprite.svg#icon-facebook"></use>
-      </svg>
-    </a>
-    <a href="" class="button footer__social-item footer__youtube">
-      <svg class="footer__social-icon">
-        <use xlink:href="img/sprite.svg#icon-youtube"></use>
-      </svg>
-    </a>
+      <a href="" class="button footer__social-item footer__twitter" title="На страницу twitter">
+          <svg class="footer__social-icon">
+              <use xlink:href="img/sprite.svg#icon-twitter"></use>
+          </svg>
+      </a>
+      <a href="" class="button footer__social-item footer__facebook" title="На страницу facebook">
+          <svg class="footer__social-icon">
+              <use xlink:href="img/sprite.svg#icon-facebook"></use>
+          </svg>
+      </a>
+      <a href="" class="button footer__social-item footer__youtube" title="На страницу youtube">
+          <svg class="footer__social-icon">
+              <use xlink:href="img/sprite.svg#icon-youtube"></use>
+          </svg>
+      </a>
   </div>
   <div class="footer__trademark">
     <div class="footer__firmname">Разработано</div>
-    <a href="https://htmlacademy.ru/intensive/adaptive"><svg class="footer__logo-academy">
+    <a href="https://htmlacademy.ru/intensive/adaptive" title="На страницу разработчика">
+        <svg class="footer__logo-academy" width="40" height="40">
       <use xlink:href="img/sprite.svg#icon-academy"></use>
     </svg>
     </a>

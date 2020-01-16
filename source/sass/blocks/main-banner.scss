@@ -4,14 +4,10 @@
   background-position: 49.8% bottom;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 90px 0 85px;
+  padding: 91px 0 85px;
 
   @media (min-resolution: $retina-dppx) {
     background-image: url("../img/bg-intro-triangle-mobile.svg"), url("../img/bg-back-mobile@2x.jpg");
-  }
-
-  @-moz-document url-prefix("") {
-    padding-top: 91px;
   }
 }
 
