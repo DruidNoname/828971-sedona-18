@@ -45,9 +45,24 @@
   margin-right: 28px;
 }
 
+.video-interface__controller-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
 .video-interface__controller-icon {
   height: 20px;
   fill: #5c6870;
+}
+
+.video-interface__controller-button:hover .video-interface__controller-icon { //добавлено к кнопкам, а не к иконкам, поскольку пользователь взаимодействует с кнопками, а не с иконками
+  fill: $simply-gray;
+}
+
+.video-interface__controller-button:active .video-interface__controller-icon {
+  fill: $simply-gray;
+  opacity: 0.3;
 }
 
 @media (min-width: 768px) {
@@ -82,13 +97,18 @@
     order: 2;
   }
 
-  .video-interface__controller-button {
-    background: transparent;
-    border: none;
-  }
-
   .video-interface__controller-icon {
     fill: #ffffff;
+  }
+
+  .video-interface__controller-button:hover .video-interface__controller-icon {
+    fill: #ffffff;
+    opacity: 0.6;
+  }
+
+  .video-interface__controller-button:active .video-interface__controller-icon {
+    fill: #ffffff;
+    opacity: 0.3;
   }
 }
 
