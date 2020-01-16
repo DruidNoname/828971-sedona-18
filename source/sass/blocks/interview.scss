@@ -196,11 +196,12 @@
   &::before {
     background: $disabled-gray;
   }
-
-  &::after {
-    opacity: 0.3;
-  }
 }
+
+.interview__switcher:checked + .interview__switcher-label:active::after {
+  opacity: 0.3;
+}
+
 
 .interview__input_textarea {
   font-size: 18px;
