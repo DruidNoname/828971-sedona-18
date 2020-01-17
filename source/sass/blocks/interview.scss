@@ -10,7 +10,11 @@
   flex-direction: column;
   justify-content: center;
   border-top: 1px solid rgba($simply-gray, 0.1);
-  padding: 21px 20px 23px; //отступы по бокам здесь, иначе инпуты за них вылазят
+  padding: 21px 20px 25px; //отступы по бокам здесь, иначе инпуты за них вылазят
+
+  @-moz-document url-prefix("") {
+    padding-bottom: 23px;
+  }
 }
 
 .interview__title {
@@ -60,23 +64,21 @@
     margin-left: 21px; //отступ от лейблов в графе с контактами
     margin-bottom: 9px;
   }
-
-  .interview__input_separate {
-    margin-bottom: 9px;
-  }
 }
 
-.interview__inpit-holder {
+.interview__input-holder {
   display: flex;
-  flex-grow: 1;
+  box-sizing: border-box;
+  margin-bottom: 9px;
 }
 
 .interview__contact-icon {
-  width: 20px;
-  height: 20px;
   background: #e6e6e6;
-  border: 19px solid transparent;
-  flex-shrink: 0;
+  padding: 19px;
+}
+
+.interview__input-holder:last-child .interview__contact-icon {
+  padding: 21px 19px 22px;
 }
 
 .interview__input {
@@ -87,6 +89,7 @@
   font-size: 18px;
   font-weight: bold;
   position: relative;
+  overflow: hidden;
 
   &:hover {
     background: $accent-gray;
@@ -145,16 +148,6 @@
   z-index: -1;
   opacity: 0;
   margin: 10px 0 0 7px;
-
-  &:hover {
-    background: $accent-gray;
-  }
-
-  &:focus {
-    outline: 3px solid $accent-gray;
-    outline-offset: -3px;
-    background: #ffffff;
-  }
 }
 
 .interview__switcher:checked + .interview__switcher-label::after { //чекбокс выделен
@@ -198,6 +191,12 @@
   }
 }
 
+.interview__switcher:focus + .interview__switcher-label {
+  &::before { //фокусное состояние модных чекбоксов и радиокнопок
+    background: $disabled-gray;
+  }
+}
+
 .interview__switcher:checked + .interview__switcher-label:active::after {
   opacity: 0.3;
 }
@@ -213,6 +212,7 @@
   display: flex;
   flex-direction: column;
   padding: 31px 0 35px;
+  margin: 0 20px;
 
   .interview__button {
     padding: 0;
@@ -246,7 +246,7 @@
     flex-basis: 100%;
     border-top: none;
     justify-content: flex-start;
-    padding: 14px 0 52px;
+    padding: 13px 0 52px;
   }
 
   .interview__form-block:first-child,
@@ -273,7 +273,7 @@
     border-right: 1px solid rgba($simply-gray, 0.3);
     flex-grow: 1;
     padding: 0;
-    margin: 14px 0 51px; //патамушта полосочка...
+    margin: 14px 0 49px; //патамушта полосочка...
   }
 
   .interview__line-decorator {
@@ -311,19 +311,18 @@
   }
 
   .interview__form-block:nth-child(2) {
-    padding-bottom: 15px;
+    padding-bottom: 37px;
   }
 
   .interview__contacts-wrapper {
     flex-direction: column;
   }
 
-  .interview__contacts-wrapper .interview__input_separate { //стилизация полей с телефоном
-    flex-basis: 85%; //иконка со строкой норм встаёт
+  .interview__input-holder { //стилизация полей с телефоном
     margin-bottom: 21px;
   }
 
-  .interview__input_separate:last-child {
+  .interview__input-holder:last-child {
     margin-bottom: 0;
   }
 
@@ -352,7 +351,7 @@
   }
 
   .interview__input_textarea {
-    margin: 30px 0 6px; //здесь опять отступ от элемента потому, что к нему легче обратиться, чем к однотипному заголовку или однотипному контейнеру
+    margin: 30px 0 10px; //здесь опять отступ от элемента потому, что к нему легче обратиться, чем к однотипному заголовку или однотипному контейнеру
   }
 
   .interview__button-container { //контейнер для кнопки
@@ -362,6 +361,7 @@
     align-self: flex-start;
     width: 100%;
     padding-top: 0;
+    margin: 0;
 
     .button {
       width: 50%;
@@ -387,9 +387,15 @@
     padding-bottom: 66px;
   }
 
-  .interview__input_separate { //я забыла, зачем вводила этот класс >_<
+  .interview__form-block {
+    padding: 13px 0 52px;
+  }
+
+  .interview__input-holder,
+  .interview__input-holder:last-child {
+    align-items: center;
     flex-basis: auto;
-    margin-left: 16px;
+    margin-bottom: 10px;
   }
 
   .interview__form-block:first-child,
@@ -420,16 +426,16 @@
   }
 
   .interview__line-decorator {
-    margin-bottom: 73px;
+    margin-bottom: 68px;
 
     &::before,
     &::after {
-      width: 300px;
+      width: 275px;
     }
   }
 
   .interview__form-block:nth-child(2) {
-    padding-bottom: 38px;
+    padding-bottom: 35px;
   }
 
   .interview__contacts-wrapper {
@@ -450,10 +456,10 @@
 
     .interview__input {
       max-height: 20px;
-      max-width: 232px; //для соблюдения пп
+      width: 232px; //для соблюдения пп
     }
 
-    .interview__inpit-holder:first-of-type {
+    .interview__input-holder:first-of-type {
       margin-right: 79px;
     }
   }
@@ -475,7 +481,7 @@
 
   .interview__input_textarea {
     margin: 0;
-    margin-top: -20px; //опять выравнивание за счёт этого блока как легкодоступного
+    margin-top: -15px; //опять выравнивание за счёт этого блока как легкодоступного
   }
 
   .interview__button-container {
