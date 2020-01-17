@@ -99,6 +99,10 @@
   .impulse__content-corrector {
     display: block; //это костыль. Я так и не придумала, как сделать лучше
   }
+
+  .impulse__map-marker { //работает без скрипта
+    top: 72%;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -113,4 +117,5 @@
   .impulse_secondary-page .impulse__wrapper {
     padding: 71px 356px 71px; //опять пп
   }
+
 }

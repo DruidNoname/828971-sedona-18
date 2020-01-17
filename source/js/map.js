@@ -1,3 +1,10 @@
+var interMap = document.querySelectorAll(".impulse__map");
+var marker = document.querySelector(".impulse__map-marker")
+
+for (var i = 0; i < 2; i++){
+  interMap[i].classList.toggle("impulse__active");
+  marker.classList.remove("impulse__active");
+}
 
 ymaps.ready(init);
 function init(){
